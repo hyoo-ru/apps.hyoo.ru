@@ -3,7 +3,7 @@ node_js:
   - "6"
 install:
   - cd ..
-  - mkdir my
+  - mkdir hyoo
   - mv showcase.hyoo.ru hyoo/showcase
   - git init
   - git remote add origin https://github.com/eigenmethod/mam.git
