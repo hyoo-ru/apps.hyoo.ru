@@ -1,0 +1,32 @@
+[hyoo_showcase] {
+	display: flex;
+	background: var(--mol_theme_field);
+}
+
+[hyoo_showcase_scroll] {
+	display: flex;
+	flex-wrap: wrap;
+	padding: .5rem;
+}
+
+[hyoo_showcase_app] {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 calc(25% - 1rem);
+	margin: 0;
+	min-width: 16rem;
+	min-height: 12rem;
+	cursor: pointer;
+}
+
+[hyoo_showcase_app]:hover {
+	/* opacity: .9; */
+}
+
+[hyoo_showcase_app_demo] {
+	pointer-events: none;
+	box-shadow: 0 0 0 2px var(--mol_theme_line);
+	width: 200%;
+	height: 200%;
+	transform: translate( -25% , -25% ) scale( .5 );
+}
