@@ -48,6 +48,9 @@ $hyoo_showcase $mol_view
 		<= App_request $hyoo_showcase_app
 			title \HTTP Debug Tool
 			details \https://mol.js.org/app/request/
+		<= App_jsperf $hyoo_showcase_app
+			title \JS Benchmarking Tool
+			details \http://mol.js.org/app/jsperf/-/#sources=%5B%22with%28%7B%20foo%20%3A%20777%20%7D%29%20%7B%5Cn%5Ct%7B%7B%5Cn%5Ct%5Ctfoo%3B%5Cn%5Ct%7D%7D%5Cn%7D%22%2C%22const%20foo%7B%23%7D%20%3D%20%7B%20bar%20%3A%20777%20%7D%5Cn%7B%7B%5Cn%5Ctfoo.bar%3B%5Cn%7D%7D%22%5D
 		<= App_tree $hyoo_showcase_app
 			title \view.tree Compiler
 			details \https://mol.js.org/app/tree/-/
