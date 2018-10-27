@@ -1,32 +1,63 @@
 $hyoo_showcase $mol_view
 	attr * mol_theme \$mol_theme_dark
-	sub / <= Scroll $mol_scroll sub <= content /
-	apps *
-		https://mol.js.org/app/demo/-/ \$mol components
-		https://toys.hyoo.ru/ \Online store
-		https://mol.js.org/app/todomvc/ \ToDoMVC
-		https://mol.js.org/app/supplies/#supply=75BCD15 \Supplies
-		https://mol.js.org/app/life/#snapshot=0~1fffe~2ffff~20000~20001~10002~30000~6ffff~7ffff~7fffe~6fffe~6fffd~7fffd~80000~8fffc~a0000~a0001~afffc~afffb~14fffe~15fffd~15fffe~14fffd~-3~-fffd~-10003~-1fffd~-20002~-2fffe~-3ffff~-40000~-30001~-d0000~-e0000~-d0001~-c0001 \Life game
-		https://mol.js.org/app/habhub/#gist=https%3A%2F%2Fapi.github.com%2Frepos%2Fnin-jin%2FHabHub%2Fissues%2F3 \Reader
-		http://mol.js.org/app/lamps/#lamp=1 \Lamps database
-		https://mol.js.org/app/questions/#question=2003505 \StackOverflow client
-		https://mol.js.org/app/calc/#title=a*x**2%20%2B%20b*x%20%2B%20c%20%3D%200/A1=a/B2=6/A2=3/B1=b/C1=c/E1=D/E2=%3D%20B2**2%20-%204*A2*C2/G1=x1/G2=%3D%20%28%20-B2%20%2B%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/H1=x2/H2=%3D%20%28%20-B2%20-%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/C2=0 \Spreadsheet
-		https://mol.js.org/app/files/demo/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FSales%2FAustralia%2F \File manager
-		https://mol.js.org/app/slides/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2 \Slideshow
-		https://mol.js.org/app/taxon/demo/ \Person registry
-		http://mol.js.org/app/rdf/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead \RDF browser
-		https://mol.js.org/app/bench/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F \Benchmark
-		https://mol.js.org/app/request/ \HTTP Debug Tool
-		https://mol.js.org/app/tree/-/ \view.tree Compiler
-	App!uri $hyoo_showcase_app
-		title <= app_title!uri \
-		preview <= app_uri!uri \
-		details <= app_uri!uri \
+	sub / <= Scroll $mol_scroll sub <= apps /
+		<= App_widgets $hyoo_showcase_app
+			title \$mol components
+			details \https://mol.js.org/app/demo/-/
+		<= App_toys $hyoo_showcase_app
+			title \Online store
+			details \https://toys.hyoo.ru/
+		<= App_todomvc $hyoo_showcase_app
+			title \ToDoMVC
+			details \https://mol.js.org/app/todomvc/
+		<= App_supplies $hyoo_showcase_app
+			title \Supplies
+			details \https://mol.js.org/app/supplies/#supply=75BCD15
+		<= App_life $hyoo_showcase_app
+			title \Life game
+			details \https://mol.js.org/app/life/#snapshot=0~1fffe~2ffff~20000~20001~10002~30000~6ffff~7ffff~7fffe~6fffe~6fffd~7fffd~80000~8fffc~a0000~a0001~afffc~afffb~14fffe~15fffd~15fffe~14fffd~-3~-fffd~-10003~-1fffd~-20002~-2fffe~-3ffff~-40000~-30001~-d0000~-e0000~-d0001~-c0001
+		<= App_habhub $hyoo_showcase_app
+			title \Reader
+			details \https://mol.js.org/app/habhub/#gist=https%3A%2F%2Fapi.github.com%2Frepos%2Fnin-jin%2FHabHub%2Fissues%2F3
+		<= App_questions $hyoo_showcase_app
+			title \StackOverflow client
+			details \https://mol.js.org/app/questions/#question=2003505
+		<= App_calc $hyoo_showcase_app
+			title \Spreadsheet
+			details \https://mol.js.org/app/calc/#title=a*x**2%20%2B%20b*x%20%2B%20c%20%3D%200/A1=a/B2=6/A2=3/B1=b/C1=c/E1=D/E2=%3D%20B2**2%20-%204*A2*C2/G1=x1/G2=%3D%20%28%20-B2%20%2B%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/H1=x2/H2=%3D%20%28%20-B2%20-%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/C2=0
+		<= App_files $hyoo_showcase_app
+			title \File manager
+			details \https://mol.js.org/app/files/demo/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FSales%2FAustralia%2F
+		<= App_slides $hyoo_showcase_app
+			title \Slideshow
+			details \https://mol.js.org/app/slides/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2
+		<= App_taxon $hyoo_showcase_app
+			title \Person registry
+			details \https://mol.js.org/app/taxon/demo/
+		<= App_lamps $hyoo_showcase_app
+			title \Lamps database
+			details \http://mol.js.org/app/lamps/#lamp=1
+			preview \https://habrastorage.org/webt/db/4p/vm/db4pvmn90ukqz1qruyafchxqk0m.png
+		<= App_rdf $hyoo_showcase_app
+			title \RDF browser
+			details \http://mol.js.org/app/rdf/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
+			preview \https://hsto.org/webt/ig/kl/ke/igklkep4oi5sd0nzwr2oc9scfj4.png
+		<= App_bench $hyoo_showcase_app
+			title \Benchmark
+			details \https://mol.js.org/app/bench/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F
+		<= App_request $hyoo_showcase_app
+			title \HTTP Debug Tool
+			details \https://mol.js.org/app/request/
+		<= App_tree $hyoo_showcase_app
+			title \view.tree Compiler
+			details \https://mol.js.org/app/tree/-/
 
 $hyoo_showcase_app $mol_link
 	target \_blank
 	uri <= details \
+	preview \
 	sub /
 		- <= Title $mol_view sub / <= title \
 		<= Demo $mol_demo_ext
-			uri <= preview <= details \
+			style * background-image <= background \
+			uri <= details \
