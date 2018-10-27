@@ -13,7 +13,7 @@ $hyoo_showcase $mol_view
 		https://mol.js.org/app/calc/#title=a*x**2%20%2B%20b*x%20%2B%20c%20%3D%200/A1=a/B2=6/A2=3/B1=b/C1=c/E1=D/E2=%3D%20B2**2%20-%204*A2*C2/G1=x1/G2=%3D%20%28%20-B2%20%2B%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/H1=x2/H2=%3D%20%28%20-B2%20-%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/C2=0 \Spreadsheet
 		https://mol.js.org/app/files/demo/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FSales%2FAustralia%2F \File manager
 		https://mol.js.org/app/slides/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2 \Slideshow
-		https://localhost:8080/mol/app/taxon/demo/ \Person registry
+		https://mol.js.org/app/taxon/demo/ \Person registry
 		https://mol.js.org/app/rdf/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead \RDF browser
 		https://mol.js.org/app/bench/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F \Benchmark
 		https://mol.js.org/app/request/ \HTTP Debug Tool
