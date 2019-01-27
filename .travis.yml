@@ -13,6 +13,7 @@ script:
   - npm start hyoo/showcase
   - rm hyoo/showcase/.gitignore
   - mv hyoo/showcase/- showcase.hyoo.ru
+  - mv hyoo/showcase/CNAME showcase.hyoo.ru/CNAME
 deploy:
   provider: pages
   skip_cleanup: true
@@ -20,5 +21,3 @@ deploy:
   local_dir: .
   on:
     branch: master
-notifications:
-  slack: mam-mol:Z7vokFhXaSrMlPXzq6L93bUj
