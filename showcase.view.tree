@@ -7,12 +7,15 @@ $hyoo_showcase $mol_view
 		<= App_toys $hyoo_showcase_app
 			title \Online store
 			details \https://toys.hyoo.ru/
+		<= App_piterjs $hyoo_showcase_app
+			title \PiterJS
+			details \https://hyoo-ru.github.io/piterjs.org/#meetup=recbb96g5ghjCvLHb
 		<= App_todomvc $hyoo_showcase_app
 			title \ToDoMVC
 			details \https://mol.js.org/app/todomvc/
 		<= App_supplies $hyoo_showcase_app
 			title \Supplies
-			details \https://mol.js.org/app/supplies/#supply=75BCD15
+			details \https://mol.js.org/app/supplies/#entered/supply=75BCD15
 		<= App_life $hyoo_showcase_app
 			title \Life game
 			details \https://mol.js.org/app/life/#snapshot=0~1fffe~2ffff~20000~20001~10002~30000~6ffff~7ffff~7fffe~6fffe~6fffd~7fffd~80000~8fffc~a0000~a0001~afffc~afffb~14fffe~15fffd~15fffe~14fffd~-3~-fffd~-10003~-1fffd~-20002~-2fffe~-3ffff~-40000~-30001~-d0000~-e0000~-d0001~-c0001
