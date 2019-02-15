@@ -9,7 +9,7 @@ $hyoo_showcase $mol_view
 			details \https://toys.hyoo.ru/
 		<= App_piterjs $hyoo_showcase_app
 			title \PiterJS
-			details \https://hyoo-ru.github.io/piterjs.org/#meetup=recbb96g5ghjCvLHb
+			details \https://hyoo-ru.github.io/piterjs.org/#meetup=30
 		<= App_todomvc $hyoo_showcase_app
 			title \ToDoMVC
 			details \https://mol.js.org/app/todomvc/
