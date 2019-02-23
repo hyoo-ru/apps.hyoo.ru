@@ -10,6 +10,9 @@ $hyoo_showcase $mol_view
 		<= App_piterjs $hyoo_showcase_app
 			title \PiterJS
 			details \https://hyoo-ru.github.io/piterjs.org/#meetup=30
+		<= App_scout $hyoo_showcase_app
+			title \Игротека вожатого
+			details \https://scout.hyoo.ru/#gist=wall-vs-wall
 		<= App_todomvc $hyoo_showcase_app
 			title \ToDoMVC
 			details \https://mol.js.org/app/todomvc/
