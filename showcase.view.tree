@@ -50,7 +50,7 @@ $hyoo_showcase $mol_view
 			preview \https://hsto.org/webt/ig/kl/ke/igklkep4oi5sd0nzwr2oc9scfj4.png
 		<= App_bench $hyoo_showcase_app
 			title \Benchmark
-			details \https://mol.js.org/app/bench/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F
+			details \https://mol.js.org/app/bench/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sample=mol/sort=fill
 		<= App_request $hyoo_showcase_app
 			title \HTTP Debug Tool
 			details \https://mol.js.org/app/request/
