@@ -70,7 +70,7 @@ $hyoo_showcase_app $mol_link
 	uri <= details \
 	preview \
 	sub /
-		- <= Title $mol_view sub / <= title \
+		<= Title $mol_view sub / <= title \
 		<= Demo $mol_demo_ext
 			style * background-image <= background \
 			uri <= details \

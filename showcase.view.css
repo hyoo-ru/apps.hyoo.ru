@@ -12,10 +12,9 @@
 [hyoo_showcase_app] {
 	display: flex;
 	flex-direction: column;
-	flex: 1 1 calc(25% - 1rem);
+	flex: 1 1 26rem;
 	margin: 0;
-	min-width: 16rem;
-	min-height: 12rem;
+	height: 15.5rem;
 	cursor: pointer;
 }
 
@@ -27,7 +26,7 @@
 	pointer-events: none;
 	box-shadow: 0 0 0 2px var(--mol_theme_line);
 	width: 200%;
-	height: 200%;
+	height: 26rem;
 	transform: translate( -25% , -25% ) scale( .5 );
 	background-size: cover;
 }
