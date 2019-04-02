@@ -35,13 +35,6 @@ $hyoo_showcase $mol_page
 		<= App_questions $hyoo_showcase_app
 			title <= app_questions_title @ \StackOverflow client
 			details \https://mol.js.org/app/questions/#question=2003505
-		<= App_calc $hyoo_showcase_app
-			title <= app_calc_title @ \Spreadsheet
-			details \https://mol.js.org/app/calc/#title=a*x**2%20%2B%20b*x%20%2B%20c%20%3D%200/A1=a/B2=6/A2=3/B1=b/C1=c/E1=D/E2=%3D%20B2**2%20-%204*A2*C2/G1=x1/G2=%3D%20%28%20-B2%20%2B%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/H1=x2/H2=%3D%20%28%20-B2%20-%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/C2=0
-		<= App_files $hyoo_showcase_app
-			title <= app_files_title @ \File manager
-			details \https://mol.js.org/app/files/demo/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
-			preview \https://habrastorage.org/webt/9-/rr/9m/9-rr9ml46jyt1tsuxdm3jw26if0.png
 		<= App_slides $hyoo_showcase_app
 			title <= app_slides_title @ \Slideshow
 			details \https://mol.js.org/app/slides/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2
@@ -68,9 +61,16 @@ $hyoo_showcase $mol_page
 		<= App_tree $hyoo_showcase_app
 			title <= app_tree_title @ \view.tree Compiler
 			details \https://mol.js.org/app/tree/-/
+		<= App_calc $hyoo_showcase_app
+			title <= app_calc_title @ \Spreadsheet
+			details \https://mol.js.org/app/calc/#title=a*x**2%20%2B%20b*x%20%2B%20c%20%3D%200/A1=a/B2=6/A2=3/B1=b/C1=c/E1=D/E2=%3D%20B2**2%20-%204*A2*C2/G1=x1/G2=%3D%20%28%20-B2%20%2B%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/H1=x2/H2=%3D%20%28%20-B2%20-%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/C2=0
 		<= App_taxon $hyoo_showcase_app
 			title <= app_taxon_title @ \Person registry
 			details \https://mol.js.org/app/taxon/demo/
+		<= App_files $hyoo_showcase_app
+			title <= app_files_title @ \File manager
+			details \https://mol.js.org/app/files/demo/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
+			preview \https://habrastorage.org/webt/9-/rr/9m/9-rr9ml46jyt1tsuxdm3jw26if0.png
 
 $hyoo_showcase_app $mol_link
 	target \_blank
