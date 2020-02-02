@@ -73,6 +73,9 @@ $hyoo_showcase $mol_page
 		<= App_icons $hyoo_showcase_app
 			title <= app_icons_title @ \Icons galery
 			details \https://nin-jin.github.io/mol_icon/
+		<= App_calc $hyoo_showcase_app
+			title <= app_calc_title @ \Simple spreedsheet app
+			details \\https://calc.hyoo.ru/
 		- <= App_files $hyoo_showcase_app
 			title <= app_files_title @ \File manager
 			details \https://mol.js.org/app/files/demo/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
