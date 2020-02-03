@@ -77,6 +77,9 @@ $hyoo_showcase $mol_page
 			title <= app_files_title @ \File manager
 			details \https://mol.js.org/app/files/demo/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
 			preview \https://habrastorage.org/webt/9-/rr/9m/9-rr9ml46jyt1tsuxdm3jw26if0.png
+		<= App_portal $hyoo_showcase_app
+			title <= app_portal_title @ \Portal
+			details \https://portal.hyoo.ru/
 
 $hyoo_showcase_app $mol_link
 	target \_blank
