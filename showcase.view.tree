@@ -43,7 +43,7 @@ $hyoo_showcase $mol_page
 			details \https://mol.js.org/app/questions/-/#question=2003505
 		<= App_slides $hyoo_showcase_app
 			title <= app_slides_title @ \Slideshow
-			details \https://mol.js.org/app/slides/-/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2
+			details \https://slides.hyoo.ru/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2
 		<= App_lamps $hyoo_showcase_app
 			title <= app_lamps_title @ \Lamps database
 			details \http://mol.js.org/app/lamps/-/#lamp=1
