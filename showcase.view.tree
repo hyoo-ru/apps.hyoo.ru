@@ -28,7 +28,7 @@ $hyoo_showcase $mol_page
 			details \https://notes.hyoo.ru/#
 		<= App_todomvc $hyoo_showcase_app
 			title <= app_todomvc_title @ \ToDoMVC
-			details \https://mol.js.org/app/todomvc/
+			details \https://todomvc.hyoo.ru/
 		<= App_supplies $hyoo_showcase_app
 			title <= app_supplies_title @ \Supplies
 			details \https://mol.js.org/app/supplies/#entered/supply=75BCD15
