@@ -28,7 +28,7 @@ $hyoo_showcase $mol_page
 			details \https://notes.hyoo.ru/#
 		<= App_todomvc $hyoo_showcase_app
 			title <= app_todomvc_title @ \ToDoMVC
-			details \https://mol.js.org/app/todomvc/-/
+			details \https://todomvc.hyoo.ru/
 		<= App_supplies $hyoo_showcase_app
 			title <= app_supplies_title @ \Supplies
 			details \https://mol.js.org/app/supplies/-/#entered/supply=75BCD15
@@ -37,7 +37,7 @@ $hyoo_showcase $mol_page
 			details \https://mol.js.org/app/life/-/#snapshot=0~1fffe~2ffff~20000~20001~10002~30000~6ffff~7ffff~7fffe~6fffe~6fffd~7fffd~80000~8fffc~a0000~a0001~afffc~afffb~14fffe~15fffd~15fffe~14fffd~-3~-fffd~-10003~-1fffd~-20002~-2fffe~-3ffff~-40000~-30001~-d0000~-e0000~-d0001~-c0001
 		<= App_habhub $hyoo_showcase_app
 			title <= app_habhub_title @ \Reader
-			details \https://mol.js.org/app/habhub/-/#gist=https%3A%2F%2Fapi.github.com%2Frepos%2Fnin-jin%2FHabHub%2Fissues%2F3
+			details \https://habhub.hyoo.ru/#gist=https%3A%2F%2Fapi.github.com%2Frepos%2Fnin-jin%2FHabHub%2Fissues%2F3
 		<= App_questions $hyoo_showcase_app
 			title <= app_questions_title @ \StackOverflow client
 			details \https://mol.js.org/app/questions/-/#question=2003505
@@ -66,7 +66,7 @@ $hyoo_showcase $mol_page
 			details \https://mol.js.org/app/issues/-/#projects=eigenmethod%2Fmol%2Cfacebook%2Freact%2Cvuejs%2Fvue
 		<= App_tree $hyoo_showcase_app
 			title <= app_tree_title @ \view.tree Compiler
-			details \https://mol.js.org/app/tree/-/
+			details \https://tree.hyoo.ru/
 		<= App_taxon $hyoo_showcase_app
 			title <= app_taxon_title @ \Person registry
 			details \https://mol.js.org/app/taxon/demo/-/
@@ -77,6 +77,9 @@ $hyoo_showcase $mol_page
 			title <= app_files_title @ \File manager
 			details \https://mol.js.org/app/files/demo/-/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
 			preview \https://habrastorage.org/webt/9-/rr/9m/9-rr9ml46jyt1tsuxdm3jw26if0.png
+		<= App_portal $hyoo_showcase_app
+			title <= app_portal_title @ \Portal
+			details \https://portal.hyoo.ru/
 
 $hyoo_showcase_app $mol_link
 	target \_blank
