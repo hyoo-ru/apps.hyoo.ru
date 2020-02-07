@@ -31,51 +31,51 @@ $hyoo_showcase $mol_page
 			details \https://todomvc.hyoo.ru/
 		<= App_supplies $hyoo_showcase_app
 			title <= app_supplies_title @ \Supplies
-			details \https://mol.js.org/app/supplies/#entered/supply=75BCD15
+			details \https://mol.js.org/app/supplies/-/#entered/supply=75BCD15
 		<= App_life $hyoo_showcase_app
 			title <= app_life_title @ \Life game
-			details \https://mol.js.org/app/life/#snapshot=0~1fffe~2ffff~20000~20001~10002~30000~6ffff~7ffff~7fffe~6fffe~6fffd~7fffd~80000~8fffc~a0000~a0001~afffc~afffb~14fffe~15fffd~15fffe~14fffd~-3~-fffd~-10003~-1fffd~-20002~-2fffe~-3ffff~-40000~-30001~-d0000~-e0000~-d0001~-c0001
+			details \https://mol.js.org/app/life/-/#snapshot=0~1fffe~2ffff~20000~20001~10002~30000~6ffff~7ffff~7fffe~6fffe~6fffd~7fffd~80000~8fffc~a0000~a0001~afffc~afffb~14fffe~15fffd~15fffe~14fffd~-3~-fffd~-10003~-1fffd~-20002~-2fffe~-3ffff~-40000~-30001~-d0000~-e0000~-d0001~-c0001
 		<= App_habhub $hyoo_showcase_app
 			title <= app_habhub_title @ \Reader
 			details \https://habhub.hyoo.ru/#gist=https%3A%2F%2Fapi.github.com%2Frepos%2Fnin-jin%2FHabHub%2Fissues%2F3
 		<= App_questions $hyoo_showcase_app
 			title <= app_questions_title @ \StackOverflow client
-			details \https://mol.js.org/app/questions/#question=2003505
+			details \https://mol.js.org/app/questions/-/#question=2003505
 		<= App_slides $hyoo_showcase_app
 			title <= app_slides_title @ \Slideshow
-			details \https://mol.js.org/app/slides/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2
+			details \https://slides.hyoo.ru/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2
 		<= App_lamps $hyoo_showcase_app
 			title <= app_lamps_title @ \Lamps database
-			details \http://mol.js.org/app/lamps/#lamp=1
+			details \http://mol.js.org/app/lamps/-/#lamp=1
 			preview \https://habrastorage.org/webt/db/4p/vm/db4pvmn90ukqz1qruyafchxqk0m.png
 		<= App_rdf $hyoo_showcase_app
 			title <= app_rdf_title @ \RDF browser
-			details \http://mol.js.org/app/rdf/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
+			details \http://mol.js.org/app/rdf/-/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
 			preview \https://hsto.org/webt/ig/kl/ke/igklkep4oi5sd0nzwr2oc9scfj4.png
 		<= App_bench $hyoo_showcase_app
 			title <= app_bench_title @ \Benchmark
-			details \https://mol.js.org/app/bench/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sample=mol/sort=fill
+			details \https://mol.js.org/app/bench/-/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sample=mol/sort=fill
 		<= App_request $hyoo_showcase_app
 			title <= app_request_title @ \HTTP Debug Tool
-			details \https://mol.js.org/app/request/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Feigenmethod%2Fmol
+			details \https://mol.js.org/app/request/-/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Feigenmethod%2Fmol
 		<= App_jsperf $hyoo_showcase_app
 			title <= app_jsperf_title @ \JS Benchmarking Tool
 			details \https://mol.js.org/app/jsperf/-/#sources=%5B%22window.location.href%3B%22%2C%22document.location.href%3B%22%5D/prefix/postfix/optimized=true
 		<= App_issues $hyoo_showcase_app
 			title <= app_issues_title @ \GitHub projects comparison
-			details \https://mol.js.org/app/issues/#projects=eigenmethod%2Fmol%2Cfacebook%2Freact%2Cvuejs%2Fvue
+			details \https://mol.js.org/app/issues/-/#projects=eigenmethod%2Fmol%2Cfacebook%2Freact%2Cvuejs%2Fvue
 		<= App_tree $hyoo_showcase_app
 			title <= app_tree_title @ \view.tree Compiler
 			details \https://tree.hyoo.ru/
 		<= App_taxon $hyoo_showcase_app
 			title <= app_taxon_title @ \Person registry
-			details \https://mol.js.org/app/taxon/demo/
+			details \https://mol.js.org/app/taxon/demo/-/
 		<= App_icons $hyoo_showcase_app
 			title <= app_icons_title @ \Icons galery
 			details \https://nin-jin.github.io/mol_icon/
 		- <= App_files $hyoo_showcase_app
 			title <= app_files_title @ \File manager
-			details \https://mol.js.org/app/files/demo/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
+			details \https://mol.js.org/app/files/demo/-/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
 			preview \https://habrastorage.org/webt/9-/rr/9m/9-rr9ml46jyt1tsuxdm3jw26if0.png
 		<= App_portal $hyoo_showcase_app
 			title <= app_portal_title @ \Portal
