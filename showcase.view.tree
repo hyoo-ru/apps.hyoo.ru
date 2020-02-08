@@ -46,18 +46,18 @@ $hyoo_showcase $mol_page
 			details \https://slides.hyoo.ru/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2
 		<= App_lamps $hyoo_showcase_app
 			title <= app_lamps_title @ \Lamps database
-			details \http://mol.js.org/app/lamps/-/#lamp=1
+			details \http://lamps.hyoo.ru/#lamp=1
 			preview \https://habrastorage.org/webt/db/4p/vm/db4pvmn90ukqz1qruyafchxqk0m.png
 		<= App_rdf $hyoo_showcase_app
 			title <= app_rdf_title @ \RDF browser
-			details \http://mol.js.org/app/rdf/-/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
+			details \http://rdf.hyoo.ru/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
 			preview \https://hsto.org/webt/ig/kl/ke/igklkep4oi5sd0nzwr2oc9scfj4.png
 		<= App_bench $hyoo_showcase_app
 			title <= app_bench_title @ \Benchmark
 			details \https://mol.js.org/app/bench/-/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sample=mol/sort=fill
 		<= App_request $hyoo_showcase_app
 			title <= app_request_title @ \HTTP Debug Tool
-			details \https://mol.js.org/app/request/-/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Feigenmethod%2Fmol
+			details \https://http.hyoo.ru/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Feigenmethod%2Fmol
 		<= App_jsperf $hyoo_showcase_app
 			title <= app_jsperf_title @ \JS Benchmarking Tool
 			details \https://mol.js.org/app/jsperf/-/#sources=%5B%22window.location.href%3B%22%2C%22document.location.href%3B%22%5D/prefix/postfix/optimized=true
