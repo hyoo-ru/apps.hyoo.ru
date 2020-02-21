@@ -60,7 +60,7 @@ $hyoo_showcase $mol_page
 			details \https://http.hyoo.ru/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Feigenmethod%2Fmol
 		<= App_jsperf $hyoo_showcase_app
 			title <= app_jsperf_title @ \JS Benchmarking Tool
-			details \https://mol.js.org/app/jsperf/-/#sources=%5B%22window.location.href%3B%22%2C%22document.location.href%3B%22%5D/prefix/postfix/optimized=true
+			details \https://jsperf.hyoo.ru/#sources=%5B%22window.location.href%3B%22%2C%22document.location.href%3B%22%5D/prefix/postfix/optimized=true
 		<= App_issues $hyoo_showcase_app
 			title <= app_issues_title @ \GitHub projects comparison
 			details \https://github-compare.hyoo.ru/#projects=eigenmethod%2Fmol%2Cfacebook%2Freact%2Cvuejs%2Fvue
@@ -75,7 +75,7 @@ $hyoo_showcase $mol_page
 			details \https://nin-jin.github.io/mol_icon/
 		- <= App_files $hyoo_showcase_app
 			title <= app_files_title @ \File manager
-			details \https://mol.js.org/app/files/demo/-/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
+			details \https://webdav.hyoo.ru/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
 			preview \https://habrastorage.org/webt/9-/rr/9m/9-rr9ml46jyt1tsuxdm3jw26if0.png
 		<= App_portal $hyoo_showcase_app
 			title <= app_portal_title @ \Portal
