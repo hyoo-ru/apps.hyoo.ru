@@ -54,7 +54,7 @@ $hyoo_showcase $mol_page
 			preview \https://hsto.org/webt/ig/kl/ke/igklkep4oi5sd0nzwr2oc9scfj4.png
 		<= App_bench $hyoo_showcase_app
 			title <= app_bench_title @ \Benchmark
-			details \https://mol.js.org/app/bench/-/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sample=mol/sort=fill
+			details \https://bench.hyoo.ru/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sample=mol/sort=fill
 		<= App_request $hyoo_showcase_app
 			title <= app_request_title @ \HTTP Debug Tool
 			details \https://http.hyoo.ru/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Feigenmethod%2Fmol
@@ -73,8 +73,8 @@ $hyoo_showcase $mol_page
 		<= App_icons $hyoo_showcase_app
 			title <= app_icons_title @ \Icons galery
 			details \https://nin-jin.github.io/mol_icon/
-		- <= App_files $hyoo_showcase_app
-			title <= app_files_title @ \File manager
+		- <= App_webdav $hyoo_showcase_app
+			title <= app_webdav_title @ \File manager
 			details \https://webdav.hyoo.ru/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
 			preview \https://habrastorage.org/webt/9-/rr/9m/9-rr9ml46jyt1tsuxdm3jw26if0.png
 		<= App_portal $hyoo_showcase_app
