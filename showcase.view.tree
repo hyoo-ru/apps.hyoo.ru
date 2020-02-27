@@ -63,7 +63,7 @@ $hyoo_showcase $mol_page
 			details \https://jsperf.hyoo.ru/#sources=%5B%22window.location.href%3B%22%2C%22document.location.href%3B%22%5D/prefix/postfix/optimized=true
 		<= App_issues $hyoo_showcase_app
 			title <= app_issues_title @ \GitHub projects comparison
-			details \https://github-compare.hyoo.ru/#projects=eigenmethod%2Fmol%2Cfacebook%2Freact%2Cvuejs%2Fvue
+			details \https://compare.github.hyoo.ru/#projects=eigenmethod%2Fmol%2Cfacebook%2Freact%2Cvuejs%2Fvue
 		<= App_tree $hyoo_showcase_app
 			title <= app_tree_title @ \view.tree Compiler
 			details \https://tree.hyoo.ru/
