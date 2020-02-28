@@ -34,7 +34,7 @@ $hyoo_showcase $mol_page
 			details \https://mol.js.org/app/supplies/-/#entered/supply=75BCD15
 		<= App_life $hyoo_showcase_app
 			title <= app_life_title @ \Life game
-			details \https://mol.js.org/app/life/-/#snapshot=0~1fffe~2ffff~20000~20001~10002~30000~6ffff~7ffff~7fffe~6fffe~6fffd~7fffd~80000~8fffc~a0000~a0001~afffc~afffb~14fffe~15fffd~15fffe~14fffd~-3~-fffd~-10003~-1fffd~-20002~-2fffe~-3ffff~-40000~-30001~-d0000~-e0000~-d0001~-c0001
+			details \https://life.hyoo.ru/#snapshot=0~1fffe~2ffff~20000~20001~10002~30000~6ffff~7ffff~7fffe~6fffe~6fffd~7fffd~80000~8fffc~a0000~a0001~afffc~afffb~14fffe~15fffd~15fffe~14fffd~-3~-fffd~-10003~-1fffd~-20002~-2fffe~-3ffff~-40000~-30001~-d0000~-e0000~-d0001~-c0001
 		<= App_habhub $hyoo_showcase_app
 			title <= app_habhub_title @ \Reader
 			details \https://habhub.hyoo.ru/#gist=https%3A%2F%2Fapi.github.com%2Frepos%2Fnin-jin%2FHabHub%2Fissues%2F3
