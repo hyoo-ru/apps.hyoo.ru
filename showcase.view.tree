@@ -6,7 +6,7 @@ $hyoo_showcase $mol_page
 			uri \https://hyoo.ru
 			sub /
 				<= Offer_button $mol_button_major
-					title <= offer_title @ \Order application
+					title <= offer_title @ \Order
 	body / <= Scroll $mol_scroll sub <= apps /
 		<= App_widgets $hyoo_showcase_app
 			title <= app_widgets_title @ \$mol components
