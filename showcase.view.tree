@@ -19,7 +19,7 @@ $hyoo_showcase $mol_page
 			details \https://piterjs.org/#meetup=40
 		<= App_toys $hyoo_showcase_app
 			title <= app_toys_title @ \Online store
-			details \https://toys.hyoo.ru/
+			details \https://toys.hyoo.ru/#size=M/popular
 		<= App_calc $hyoo_showcase_app
 			title <= app_calc_title @ \Spreadsheet
 			details \https://calc.hyoo.ru/#title=a*x**2%20%2B%20b*x%20%2B%20c%20%3D%200/A1=a/B2=6/A2=3/B1=b/C1=c/E1=D/E2=%3D%20B2**2%20-%204*A2*C2/G1=x1/G2=%3D%20%28%20-B2%20%2B%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/H1=x2/H2=%3D%20%28%20-B2%20-%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/C2=0
@@ -54,7 +54,7 @@ $hyoo_showcase $mol_page
 			preview \https://hsto.org/webt/ig/kl/ke/igklkep4oi5sd0nzwr2oc9scfj4.png
 		<= App_bench $hyoo_showcase_app
 			title <= app_bench_title @ \Benchmark
-			details \https://bench.hyoo.ru/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sample=mol/sort=fill
+			details \https://bench.hyoo.ru/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sort=fill
 		<= App_request $hyoo_showcase_app
 			title <= app_request_title @ \HTTP Debug Tool
 			details \https://http.hyoo.ru/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Feigenmethod%2Fmol
@@ -67,9 +67,6 @@ $hyoo_showcase $mol_page
 		<= App_tree $hyoo_showcase_app
 			title <= app_tree_title @ \view.tree Compiler
 			details \https://tree.hyoo.ru/
-		<= App_taxon $hyoo_showcase_app
-			title <= app_taxon_title @ \Person registry
-			details \https://mol.js.org/app/taxon/demo/-/
 		<= App_icons $hyoo_showcase_app
 			title <= app_icons_title @ \Icons galery
 			details \https://nin-jin.github.io/mol_icon/
