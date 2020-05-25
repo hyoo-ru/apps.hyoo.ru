@@ -5,6 +5,7 @@
 
 [hyoo_showcase_scroll] {
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	padding: .5rem;
 }
