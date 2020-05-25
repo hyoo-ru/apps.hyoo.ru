@@ -76,7 +76,7 @@ $hyoo_showcase $mol_page
 			preview \https://habrastorage.org/webt/9-/rr/9m/9-rr9ml46jyt1tsuxdm3jw26if0.png
 		<= App_portal $hyoo_showcase_app
 			title <= app_portal_title @ \Portal
-			details \https://portal.hyoo.ru/
+			details \https://mol.hyoo.ru/#app=components
 
 $hyoo_showcase_app $mol_link
 	target \_blank
