@@ -66,7 +66,7 @@ $hyoo_showcase $mol_page
 			details \https://compare.github.hyoo.ru/#projects=eigenmethod%2Fmol%2Cfacebook%2Freact%2Cvuejs%2Fvue
 		<= App_tree $hyoo_showcase_app
 			title <= app_tree_title @ \view.tree Compiler
-			details \https://tree.hyoo.ru/
+			details \https://tree.hyoo.ru/#compile
 		<= App_icons $hyoo_showcase_app
 			title <= app_icons_title @ \Icons galery
 			details \https://nin-jin.github.io/mol_icon/
