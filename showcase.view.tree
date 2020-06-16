@@ -41,10 +41,6 @@ $hyoo_showcase $mol_page
 		<= App_slides $hyoo_showcase_app
 			title <= app_slides_title @ \Slideshow
 			details \https://slides.hyoo.ru/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2
-		<= App_lamps $hyoo_showcase_app
-			title <= app_lamps_title @ \Lamps database
-			details \http://lamps.hyoo.ru/#lamp=1
-			preview \https://habrastorage.org/webt/db/4p/vm/db4pvmn90ukqz1qruyafchxqk0m.png
 		<= App_rdf $hyoo_showcase_app
 			title <= app_rdf_title @ \RDF browser
 			details \http://rdf.hyoo.ru/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
@@ -67,10 +63,6 @@ $hyoo_showcase $mol_page
 		<= App_icons $hyoo_showcase_app
 			title <= app_icons_title @ \Icons galery
 			details \https://nin-jin.github.io/mol_icon/
-		- <= App_webdav $hyoo_showcase_app
-			title <= app_webdav_title @ \File manager
-			details \https://webdav.hyoo.ru/#current=https%3A%2F%2Fajaxexplorer.com%3A443%2FUser5df12c6%2FPictures%2F
-			preview \https://habrastorage.org/webt/9-/rr/9m/9-rr9ml46jyt1tsuxdm3jw26if0.png
 		<= App_portal $hyoo_showcase_app
 			title <= app_portal_title @ \Portal
 			details \https://mol.hyoo.ru/#app=components
