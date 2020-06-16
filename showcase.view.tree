@@ -44,7 +44,6 @@ $hyoo_showcase $mol_page
 		<= App_rdf $hyoo_showcase_app
 			title <= app_rdf_title @ \RDF browser
 			details \http://rdf.hyoo.ru/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
-			preview \https://hsto.org/webt/ig/kl/ke/igklkep4oi5sd0nzwr2oc9scfj4.png
 		<= App_bench $hyoo_showcase_app
 			title <= app_bench_title @ \Benchmark
 			details \https://bench.hyoo.ru/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sort=fill
