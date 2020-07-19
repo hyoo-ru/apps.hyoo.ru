@@ -23,6 +23,10 @@
 	/* opacity: .9; */
 }
 
+[hyoo_showcase_app_title] {
+	flex: none;
+}
+
 [hyoo_showcase_app_demo] {
 	pointer-events: none;
 	box-shadow: 0 0 0 2px var(--mol_theme_line);
