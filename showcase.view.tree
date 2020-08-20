@@ -41,6 +41,9 @@ $hyoo_showcase $mol_page
 		<= App_slides $hyoo_showcase_app
 			title <= app_slides_title @ \Slideshow
 			details \https://slides.hyoo.ru/#slides=https%3A%2F%2Fnin-jin.github.io%2Fslides%2Forp%2F/slide=2
+		<= App_iq $hyoo_showcase_app
+			title <= app_iq_title @ \IQ tester
+			details \https://iq.hyoo.ru/
 		<= App_rdf $hyoo_showcase_app
 			title <= app_rdf_title @ \RDF browser
 			details \http://rdf.hyoo.ru/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
