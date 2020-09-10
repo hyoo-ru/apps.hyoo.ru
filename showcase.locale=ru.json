@@ -18,6 +18,8 @@
 	"$hyoo_showcase_app_rdf_title": "RDF обозреватель",
 	"$hyoo_showcase_app_bench_title": "Бенчмарк",
 	"$hyoo_showcase_app_request_title": "HTTP отладчик",
+	"$hyoo_showcase_app_invest_title": "Личные инвестиции",
+	"$hyoo_showcase_app_iq_title": "Коэффициент интеллекта",
 	"$hyoo_showcase_app_jsperf_title": "Бенчмарки JS кода",
 	"$hyoo_showcase_app_issues_title": "Сравнение проектов на GitHub",
 	"$hyoo_showcase_app_tree_title": "view.tree компилятор",
