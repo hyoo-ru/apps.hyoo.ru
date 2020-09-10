@@ -26,6 +26,9 @@ $hyoo_showcase $mol_page
 		<= App_notes $hyoo_showcase_app
 			title <= app_notes_title @ \Notes
 			details \https://notes.hyoo.ru/#
+		<= App_invest $hyoo_showcase_app
+			title <= app_invest_title @ \Investments
+			details \https://invest.hyoo.ru/
 		<= App_todomvc $hyoo_showcase_app
 			title <= app_todomvc_title @ \ToDoMVC
 			details \https://todomvc.hyoo.ru/
