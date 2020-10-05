@@ -17,6 +17,9 @@ $hyoo_showcase $mol_page
 		<= App_piterjs $hyoo_showcase_app
 			title <= app_piterjs_title @ \PiterJS
 			details \https://piterjs.org/
+		<= App_fallacy $hyoo_showcase_app
+			title <= app_fallacy_title @ \Fallacies collection
+			details \https://fallacy.hyoo.ru/
 		<= App_toys $hyoo_showcase_app
 			title <= app_toys_title @ \Online store
 			details \https://toys.hyoo.ru/#size=M/popular
