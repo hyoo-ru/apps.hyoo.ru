@@ -58,16 +58,16 @@ $hyoo_showcase $mol_page
 			details \http://rdf.hyoo.ru/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
 		<= App_bench $hyoo_showcase_app
 			title <= app_bench_title @ \Benchmark
-			details \https://bench.hyoo.ru/#bench=https%3A%2F%2Feigenmethod.github.io%2Ftodomvc%2Fbenchmark%2F/sort=fill
+			details \https://bench.hyoo.ru/#bench=https%3A%2F%2Fhyoo-ru.github.io%2Ftodomvc%2Fbenchmark%2F/sort=fill
 		<= App_request $hyoo_showcase_app
 			title <= app_request_title @ \HTTP Debug Tool
-			details \https://http.hyoo.ru/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Feigenmethod%2Fmol
+			details \https://http.hyoo.ru/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Fhyoo-ru%2Fmam_mol
 		<= App_jsperf $hyoo_showcase_app
 			title <= app_jsperf_title @ \JS Benchmarking Tool
 			details \https://perf.js.hyoo.ru/#sources=%5B%22window.location.href%3B%22%2C%22document.location.href%3B%22%5D/prefix/postfix/optimized=true
 		<= App_issues $hyoo_showcase_app
 			title <= app_issues_title @ \GitHub projects comparison
-			details \https://compare.github.hyoo.ru/#projects=eigenmethod%2Fmol%2Cfacebook%2Freact%2Cvuejs%2Fvue
+			details \https://compare.github.hyoo.ru/#projects=hyoo-ru%2Fmam_mol%2Cfacebook%2Freact%2Cvuejs%2Fvue
 		<= App_tree $hyoo_showcase_app
 			title <= app_tree_title @ \view.tree Compiler
 			details \https://tree.hyoo.ru/#compile
