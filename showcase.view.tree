@@ -2,6 +2,7 @@ $hyoo_showcase $mol_page
 	attr * mol_theme \$mol_theme_dark
 	title @ \$mol applications
 	tools /
+		<= Source $mol_link_source uri \https://github.com/hyoo-ru/showcase.hyoo.ru
 		<= Offer_link $mol_link
 			uri \https://hyoo.ru
 			sub /
