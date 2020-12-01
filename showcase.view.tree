@@ -56,6 +56,9 @@ $hyoo_showcase $mol_page
 		<= App_rdf $hyoo_showcase_app
 			title <= app_rdf_title @ \RDF browser
 			details \http://rdf.hyoo.ru/#uri=http%3A%2F%2Fdbpedia.org%2Fontology%2Fhead
+		<= App_lamps $hyoo_showcase_app
+			title <= app_lamps_title @ \Lamps database
+			details \https://lamps.hyoo.ru/#lamp=1
 		<= App_bench $hyoo_showcase_app
 			title <= app_bench_title @ \Benchmark
 			details \https://bench.hyoo.ru/#bench=https%3A%2F%2Fhyoo-ru.github.io%2Ftodomvc%2Fbenchmark%2F/sort=fill
