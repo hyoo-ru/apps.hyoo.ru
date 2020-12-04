@@ -4,7 +4,7 @@ $hyoo_showcase $mol_page
 	tools /
 		<= Source $mol_link_source uri \https://github.com/hyoo-ru/showcase.hyoo.ru
 		<= Offer_link $mol_link
-			uri \https://hyoo.ru
+			uri \https://offer.hyoo.ru
 			sub /
 				<= Offer_button $mol_button_major
 					title <= offer_title @ \Order
