@@ -73,7 +73,7 @@ $hyoo_showcase $mol_page
 			title <= app_issues_title @ \GitHub projects comparison
 			details \https://compare.github.hyoo.ru/#projects=hyoo-ru%2Fmam_mol%2Cfacebook%2Freact%2Cvuejs%2Fvue
 		<= App_tree $hyoo_showcase_app
-			title <= app_tree_title @ \view.tree Compiler
+			title <= app_tree_title @ \Tree Sandbox
 			details \https://tree.hyoo.ru/#pipeline=%24mol_tree2_from_string~%24mol_jack_transform~%24mol_tree2_js_to_text~%24mol_tree2_text_to_string~%24mol_js_eval/source=hack%20%2Bpipe%0A%09hack%20%7C%3E%20var%0A%09%09pipe%0A%09%09from%0A%09hack%20%3C%7C%20pipe%0A%09from%0A%0Ahack%20%2Bmath%0A%09hack%20square%20%28**%29%0A%09%09%3C%7C%0A%09%092%0A%09hack%20next%20%28%2B%29%0A%09%09%3C%7C%0A%09%091%0A%09from%0A%0Ahack%20%2Bdebug%0A%09hack%20log%20%28%29%0A%09%09console%0A%09%09%5B%5D%20%5Clog%0A%09%09%28%2C%29%20from%0A%09from%0A%0A%2Bpipe%20%2Bmath%20%2Bdebug%20%7B%3B%7D%0A%09%7C%3E%203%0A%09%7C%3E%20square%0A%09%7C%3E%20next%0A%09log%20%3C%7C%0A%09return%20%3C%7C%0A
 		<= App_icons $hyoo_showcase_app
 			title <= app_icons_title @ \Icons galery
