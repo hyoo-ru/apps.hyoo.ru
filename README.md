@@ -1,3 +1,3 @@
-# [showcase.hyoo.ru](https://showcase.hyoo.ru)
+# [apps.hyoo.ru](https://apps.hyoo.ru)
 
-Poweder by [$mol](https://github.com/eigenmethod/mol)
+Poweder by [$mol](https://mol.hyoo.ru)
