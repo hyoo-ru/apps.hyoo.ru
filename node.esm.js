@@ -5306,10 +5306,6 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_apps_data_fallacy_title'),
                     uri: "https://fallacy.hyoo.ru/"
                 },
-                toys: {
-                    title: this.$.$mol_locale.text('$hyoo_apps_data_toys_title'),
-                    uri: "https://toys.hyoo.ru/#size=M/popular"
-                },
                 calc: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_calc_title'),
                     uri: "https://calc.hyoo.ru/#title=a*x**2%20%2B%20b*x%20%2B%20c%20%3D%200/A1=a/B2=6/A2=3/B1=b/C1=c/E1=D/E2=%3D%20B2**2%20-%204*A2*C2/G1=x1/G2=%3D%20%28%20-B2%20%2B%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/H1=x2/H2=%3D%20%28%20-B2%20-%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/C2=0"
@@ -5322,10 +5318,6 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_apps_data_invest_title'),
                     uri: "https://invest.hyoo.ru/"
                 },
-                todomvc: {
-                    title: this.$.$mol_locale.text('$hyoo_apps_data_todomvc_title'),
-                    uri: "https://todomvc.hyoo.ru/"
-                },
                 life: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_life_title'),
                     uri: "https://life.hyoo.ru/"
@@ -5333,10 +5325,6 @@ var $;
                 habhub: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_habhub_title'),
                     uri: "https://habhub.hyoo.ru/"
-                },
-                questions: {
-                    title: this.$.$mol_locale.text('$hyoo_apps_data_questions_title'),
-                    uri: "https://mol.js.org/app/questions/-/"
                 },
                 slides: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_slides_title'),
@@ -5377,6 +5365,18 @@ var $;
                 icons: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_icons_title'),
                     uri: "https://nin-jin.github.io/mol_icon/"
+                },
+                todomvc: {
+                    title: this.$.$mol_locale.text('$hyoo_apps_data_todomvc_title'),
+                    uri: "https://todomvc.hyoo.ru/"
+                },
+                questions: {
+                    title: this.$.$mol_locale.text('$hyoo_apps_data_questions_title'),
+                    uri: "https://mol.js.org/app/questions/-/"
+                },
+                toys: {
+                    title: this.$.$mol_locale.text('$hyoo_apps_data_toys_title'),
+                    uri: "https://toys.hyoo.ru/#size=M/popular"
                 }
             };
         }

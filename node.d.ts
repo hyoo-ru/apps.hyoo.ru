@@ -1685,10 +1685,6 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
-            toys: {
-                title: string;
-                uri: string;
-            };
             calc: {
                 title: string;
                 uri: string;
@@ -1701,19 +1697,11 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
-            todomvc: {
-                title: string;
-                uri: string;
-            };
             life: {
                 title: string;
                 uri: string;
             };
             habhub: {
-                title: string;
-                uri: string;
-            };
-            questions: {
                 title: string;
                 uri: string;
             };
@@ -1754,6 +1742,18 @@ declare namespace $ {
                 uri: string;
             };
             icons: {
+                title: string;
+                uri: string;
+            };
+            todomvc: {
+                title: string;
+                uri: string;
+            };
+            questions: {
+                title: string;
+                uri: string;
+            };
+            toys: {
                 title: string;
                 uri: string;
             };
