@@ -1,0 +1,15 @@
+[hyoo_apps_menu] {
+	flex: 0 0 25rem;
+}
+
+[hyoo_apps_menu_items] {
+	padding: var(--mol_gap_block);
+}
+
+[hyoo_apps_menu_link_in] {
+	flex-grow: 1;
+}
+
+[hyoo_apps_app] {
+	flex: 1 0 25rem;
+}
