@@ -25,74 +25,74 @@ $hyoo_apps $mol_book2
 		uri <= app_uri!id \
 	data *
 		offer *
-			title @ \Business offer
+			title @ \HyOO Business Offer
 			uri \https://offer.hyoo.ru/
 		mol *
-			title @ \$mol ui framework
+			title @ \$mol UI Framework
 			uri \https://mol.hyoo.ru/
 		scout *
-			title @ \Scout games
+			title @ \Scout Games
 			uri \https://scout.hyoo.ru/
 		piterjs *
-			title @ \PiterJS
+			title @ \PiterJS Meetups
 			uri \https://piterjs.org/
 		shelter *
 			title @ \Shelters ERP
 			uri \https://shelter.hyoo.ru/#login=user
 		fallacy *
-			title @ \Fallacies collection
+			title @ \Fallacies Collection
 			uri \https://fallacy.hyoo.ru/
-		toys *
-			title @ \Online store
-			uri \https://toys.hyoo.ru/#size=M/popular
 		calc *
 			title @ \Spreadsheet
 			uri \https://calc.hyoo.ru/#title=a*x**2%20%2B%20b*x%20%2B%20c%20%3D%200/A1=a/B2=6/A2=3/B1=b/C1=c/E1=D/E2=%3D%20B2**2%20-%204*A2*C2/G1=x1/G2=%3D%20%28%20-B2%20%2B%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/H1=x2/H2=%3D%20%28%20-B2%20-%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/C2=0
 		notes *
-			title @ \Notes
+			title @ \Private Notes
 			uri \https://notes.hyoo.ru/#
 		invest *
-			title @ \Investments
+			title @ \Private Investments
 			uri \https://invest.hyoo.ru/
-		todomvc *
-			title @ \ToDoMVC
-			uri \https://todomvc.hyoo.ru/
 		life *
 			title @ \Life game
 			uri \https://life.hyoo.ru/
 		habhub *
-			title @ \Reader
+			title @ \Articles Reader
 			uri \https://habhub.hyoo.ru/
-		questions *
-			title @ \StackOverflow client
-			uri \https://mol.js.org/app/questions/-/
 		slides *
 			title @ \Slideshow
 			uri \https://slides.hyoo.ru/
 		iq *
-			title @ \IQ tester
+			title @ \IQ Tester
 			uri \https://iq.hyoo.ru/
 		rdf *
-			title @ \RDF browser
+			title @ \RDF Browser
 			uri \http://rdf.hyoo.ru/
 		lamps *
-			title @ \Lamps database
+			title @ \Lamps Database
 			uri \https://lamps.hyoo.ru/
 		bench *
-			title @ \Benchmark
+			title @ \Online Benchmark
 			uri \https://bench.hyoo.ru/#bench=https%3A%2F%2Fhyoo-ru.github.io%2Ftodomvc%2Fbenchmark%2F/sort=fill
 		request *
 			title @ \HTTP Debug Tool
 			uri \https://http.hyoo.ru/#uri=https%3A%2F%2Fapi.github.com%2Frepos%2Fhyoo-ru%2Fmam_mol
 		jsperf *
-			title @ \JS Benchmarking Tool
+			title @ \JS Performance Tool
 			uri \https://perf.js.hyoo.ru/#sources=%5B%22window.location.href%3B%22%2C%22document.location.href%3B%22%5D/prefix/postfix/optimized=true
 		issues *
-			title @ \GitHub projects comparison
+			title @ \GitHub Projects Comparison
 			uri \https://compare.github.hyoo.ru/#projects=hyoo-ru%2Fmam_mol%2Cfacebook%2Freact%2Cvuejs%2Fvue
 		tree *
 			title @ \Tree Sandbox
 			uri \https://tree.hyoo.ru/
 		icons *
-			title @ \Icons galery
+			title @ \Icons Gallery
 			uri \https://nin-jin.github.io/mol_icon/
+		todomvc *
+			title @ \ToDoMVC
+			uri \https://todomvc.hyoo.ru/
+		questions *
+			title @ \StackOverflow Client
+			uri \https://mol.js.org/app/questions/-/
+		toys *
+			title @ \Online Toys Store
+			uri \https://toys.hyoo.ru/#size=M/popular
