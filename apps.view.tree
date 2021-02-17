@@ -17,12 +17,12 @@ $hyoo_apps $mol_book2
 				title <= app_title!id \
 				arg <= app_arg!id *
 			<= Menu_link_out!id $mol_link
-				uri <= app_uri!id \
+				uri <= app_uri!id
 				target \_blank
 				sub /
 					<= Menu_link_out_icon!id $mol_icon_open_in_new
 	App!id $mol_frame
-		uri <= app_uri!id \
+		uri?val <=> app_uri!id?val \
 	data *
 		offer *
 			title @ \HyOO Business Offer
