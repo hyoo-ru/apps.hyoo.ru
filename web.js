@@ -2991,13 +2991,18 @@ var $;
         pip() {
             return true;
         }
-        uri() {
+        uri(val) {
+            if (val !== undefined)
+                return val;
             return "";
         }
         allow() {
             return "";
         }
     }
+    __decorate([
+        $.$mol_mem
+    ], $mol_frame.prototype, "uri", null);
     $.$mol_frame = $mol_frame;
 })($ || ($ = {}));
 //frame.view.tree.js.map
@@ -3022,16 +3027,34 @@ var $;
         class $mol_frame extends $.$mol_frame {
             window() {
                 const node = this.dom_node();
-                this.uri();
+                this.uri_resource();
                 return $.$mol_fiber_sync(() => new Promise((done, fail) => {
-                    node.onload = () => done(node.contentWindow);
+                    node.onload = () => {
+                        done(node.contentWindow);
+                    };
                     node.onerror = (event) => {
                         fail(typeof event === 'string' ? new Error(event) : event.error || event);
                     };
                 }))();
             }
+            uri_resource() {
+                return this.uri().replace(/#.*/, '');
+            }
+            uri_listener() {
+                const node = this.dom_node();
+                return new $.$mol_dom_listener($.$mol_dom_context, 'message', $.$mol_fiber_root((event) => {
+                    if (event.source !== node.contentWindow)
+                        return;
+                    if (!Array.isArray(event.data))
+                        return;
+                    if (event.data[0] !== 'hashchange')
+                        return;
+                    this.uri(event.data[1]);
+                }));
+            }
             render() {
                 const node = super.render();
+                this.uri_listener();
                 this.window();
                 return node;
             }
@@ -3049,6 +3072,12 @@ var $;
         __decorate([
             $.$mol_mem
         ], $mol_frame.prototype, "window", null);
+        __decorate([
+            $.$mol_mem
+        ], $mol_frame.prototype, "uri_resource", null);
+        __decorate([
+            $.$mol_mem
+        ], $mol_frame.prototype, "uri_listener", null);
         $$.$mol_frame = $mol_frame;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
@@ -3730,9 +3759,15 @@ var $;
             this.prefix = prefix;
         }
         static href(next, force) {
-            if (next === undefined)
-                return $.$mol_dom_context.location.href;
-            history.replaceState(history.state, $.$mol_dom_context.document.title, next);
+            if (next === undefined) {
+                next = $.$mol_dom_context.location.href;
+            }
+            else {
+                history.replaceState(history.state, $.$mol_dom_context.document.title, next);
+            }
+            if ($.$mol_dom_context.parent !== $.$mol_dom_context.self) {
+                $.$mol_dom_context.parent.postMessage(['hashchange', next], '*');
+            }
             return next;
         }
         static dict(next) {
@@ -5069,7 +5104,7 @@ var $;
         }
         App(id) {
             const obj = new this.$.$mol_frame();
-            obj.uri = () => this.app_uri(id);
+            obj.uri = (val) => this.app_uri(id, val);
             return obj;
         }
         data() {
@@ -5217,9 +5252,6 @@ var $;
             obj.arg = () => this.app_arg(id);
             return obj;
         }
-        app_uri(id) {
-            return "";
-        }
         Menu_link_out_icon(id) {
             const obj = new this.$.$mol_icon_open_in_new();
             return obj;
@@ -5232,6 +5264,11 @@ var $;
                 this.Menu_link_out_icon(id)
             ];
             return obj;
+        }
+        app_uri(id, val) {
+            if (val !== undefined)
+                return val;
+            return "";
         }
     }
     __decorate([
@@ -5264,6 +5301,9 @@ var $;
     __decorate([
         $.$mol_mem_key
     ], $hyoo_apps.prototype, "Menu_link_out", null);
+    __decorate([
+        $.$mol_mem_key
+    ], $hyoo_apps.prototype, "app_uri", null);
     $.$hyoo_apps = $hyoo_apps;
 })($ || ($ = {}));
 //apps.view.tree.js.map
@@ -5297,16 +5337,20 @@ var $;
             app_title(app) {
                 return this.data()[app].title;
             }
-            app_uri(app) {
-                return this.data()[app].uri;
+            app_uri(app, next) {
+                var _a;
+                return (_a = this.$.$mol_state_arg.value('uri', next)) !== null && _a !== void 0 ? _a : this.data()[app].uri;
             }
             app_arg(app) {
-                return { app };
+                return { app, uri: null };
             }
         }
         __decorate([
             $.$mol_mem
         ], $hyoo_apps.prototype, "menu_items", null);
+        __decorate([
+            $.$mol_mem_key
+        ], $hyoo_apps.prototype, "app_uri", null);
         $$.$hyoo_apps = $hyoo_apps;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));

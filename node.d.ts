@@ -275,7 +275,7 @@ declare namespace $ {
         static run<Result>(task: () => Result): Result;
         static func<Args extends any[], Result, Host = void>(func: (this: Host, ...args: Args) => Result): (this: Host, ...args: Args) => Result;
         static get class(): <Class extends new (...args: any[]) => any>(Class: Class) => Class;
-        static get method(): <Host, Field extends keyof Host, Args extends any[], Result>(obj: Host, name: Field, descr: TypedPropertyDescriptor<(this: Host, ...args: Args) => Result>) => TypedPropertyDescriptor<(this: Host, ...args: Args) => Result>;
+        static get method(): (obj: object, name: PropertyKey, descr: PropertyDescriptor) => PropertyDescriptor;
         static get field(): <Host, Field extends keyof Host, Args extends any[], Result>(obj: Host, name: Field, descr: TypedPropertyDescriptor<Result>) => TypedPropertyDescriptor<Result>;
     }
 }
@@ -356,7 +356,7 @@ declare namespace $ {
     function $mol_fiber_defer<Value = void>(calculate: () => Value): $mol_fiber<any>;
     function $mol_fiber_func<This, Args extends any[], Result>(calculate: (this: This, ...args: Args) => Result): (this: This, ...args: Args) => Result;
     function $mol_fiber_root<Calculate extends (this: This, ...args: any[]) => Result, Result = void, This = void>(calculate: Calculate): Calculate;
-    function $mol_fiber_method<Host, Value>(obj: Host, name: keyof Host, descr: TypedPropertyDescriptor<(this: Host, ...args: any[]) => Value>): TypedPropertyDescriptor<(this: Host, ...args: any[]) => Value>;
+    function $mol_fiber_method<Host extends object, Value>(obj: Host, name: keyof Host, descr: TypedPropertyDescriptor<(this: Host, ...args: any[]) => Value>): PropertyDescriptor;
     function $mol_fiber_async<Args extends any[], Value>(task: (...args: Args) => Value): (...args: Args) => Promise<Value>;
     function $mol_fiber_sync<Args extends any[], Value = void, This = void>(request: (this: This, ...args: Args) => PromiseLike<Value>): (...args: Args) => Value;
     function $mol_fiber_warp(): Promise<void>;
@@ -1031,7 +1031,7 @@ declare namespace $ {
     class $mol_frame extends $mol_view {
         dom_name(): string;
         attr(): {
-            src: string;
+            src: any;
             allow: string;
         };
         fullscreen(): boolean;
@@ -1040,7 +1040,7 @@ declare namespace $ {
         encription(): boolean;
         gyroscope(): boolean;
         pip(): boolean;
-        uri(): string;
+        uri(val?: any): any;
         allow(): string;
     }
 }
@@ -1052,6 +1052,8 @@ declare namespace $.$$ {
     class $mol_frame extends $.$mol_frame {
         dom_node: (next?: HTMLIFrameElement) => HTMLIFrameElement;
         window(): unknown;
+        uri_resource(): any;
+        uri_listener(): $mol_dom_listener;
         render(): void;
         allow(): string;
     }
@@ -1769,9 +1771,9 @@ declare namespace $ {
         app_title(id: any): string;
         app_arg(id: any): {};
         Menu_link_in(id: any): $$.$mol_link;
-        app_uri(id: any): string;
         Menu_link_out_icon(id: any): $mol_icon_open_in_new;
         Menu_link_out(id: any): $$.$mol_link;
+        app_uri(id: any, val?: any): any;
     }
 }
 
@@ -1784,9 +1786,10 @@ declare namespace $.$$ {
         menu_items(): $mol_view[];
         pages(): ($mol_frame | $mol_page)[];
         app_title(app: string): any;
-        app_uri(app: string): any;
+        app_uri(app: string, next?: string): any;
         app_arg(app: string): {
             app: string;
+            uri: null;
         };
     }
 }
