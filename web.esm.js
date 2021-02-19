@@ -5339,7 +5339,12 @@ var $;
             }
             app_uri(app, next) {
                 var _a;
-                return (_a = this.$.$mol_state_arg.value('uri', next)) !== null && _a !== void 0 ? _a : this.data()[app].uri;
+                if (this.app() === app) {
+                    return (_a = this.$.$mol_state_arg.value('uri', next)) !== null && _a !== void 0 ? _a : this.data()[app].uri;
+                }
+                else {
+                    return this.data()[app].uri;
+                }
             }
             app_arg(app) {
                 return { app, uri: null };
