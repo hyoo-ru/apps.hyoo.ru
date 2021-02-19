@@ -25,7 +25,11 @@ namespace $.$$ {
 
 		@ $mol_mem_key
 		app_uri( app: string, next?: string ) {
-			return this.$.$mol_state_arg.value( 'uri', next ) ?? this.data()[ app ].uri
+			if( this.app() === app ) {
+				return this.$.$mol_state_arg.value( 'uri', next ) ?? this.data()[ app ].uri
+			} else {
+				return this.data()[ app ].uri
+			}
 		}
 
 		app_arg( app: string ) {
