@@ -85,7 +85,7 @@ var $;
                 return false;
             return true;
         }
-        catch (_a) {
+        catch {
             return false;
         }
     }
@@ -162,7 +162,7 @@ var $;
             if (this[$.$mol_ambient_ref])
                 return this[$.$mol_ambient_ref];
             const owner = $.$mol_owning_get(this);
-            return this[$.$mol_ambient_ref] = (owner === null || owner === void 0 ? void 0 : owner.$) || $mol_object2.$;
+            return this[$.$mol_ambient_ref] = owner?.$ || $mol_object2.$;
         }
         set $(next) {
             if (this[$.$mol_ambient_ref])
@@ -244,7 +244,7 @@ var $node = new Proxy({ require }, {
                 try {
                     $$.$mol_exec('.', 'npm', 'install', '@types/' + name);
                 }
-                catch (_a) { }
+                catch { }
                 break;
             }
             else {
@@ -1645,7 +1645,7 @@ var $;
                 try {
                     next[Symbol.toStringTag] = this[Symbol.toStringTag];
                 }
-                catch (_a) { }
+                catch { }
                 next[$.$mol_object_field] = this[$.$mol_object_field];
             }
             this._value = next;
@@ -2288,10 +2288,9 @@ var $;
         static wrap(task) {
             const store = new WeakMap();
             return function (next) {
-                var _a;
                 if (next === undefined && store.has(this))
                     return store.get(this);
-                const val = (_a = task.call(this, next)) !== null && _a !== void 0 ? _a : next;
+                const val = task.call(this, next) ?? next;
                 store.set(this, val);
                 return val;
             };
@@ -2306,7 +2305,7 @@ var $;
 (function ($) {
     function $mol_func_name(func) {
         let name = func.name;
-        if ((name === null || name === void 0 ? void 0 : name.length) > 1)
+        if (name?.length > 1)
             return name;
         for (let key in this) {
             try {
@@ -2316,7 +2315,7 @@ var $;
                 Object.defineProperty(func, 'name', { value: name });
                 break;
             }
-            catch (_a) { }
+            catch { }
         }
         return name;
     }
@@ -2419,10 +2418,9 @@ var $;
             return this.minimal_width();
         }
         minimal_height() {
-            var _a;
             let min = 0;
             try {
-                for (const view of (_a = this.sub()) !== null && _a !== void 0 ? _a : []) {
+                for (const view of this.sub() ?? []) {
                     if (view instanceof $mol_view) {
                         min = Math.max(min, view.minimal_height());
                     }
@@ -3191,8 +3189,7 @@ var $;
                 return next;
             }
             event_scroll(next) {
-                var _a;
-                (_a = this._event_scroll_timer()) === null || _a === void 0 ? void 0 : _a.destructor();
+                this._event_scroll_timer()?.destructor();
                 const el = this.dom_node();
                 this._event_scroll_timer(new $.$mol_after_timeout(200, $.$mol_fiber_solid.func(() => {
                     this.scroll_top(Math.max(0, el.scrollTop));
@@ -3245,7 +3242,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    $.$mol_style_attach("mol/book2/book2.view.css", "[mol_book2] {\n\tdisplay: flex;\n\tflex-flow: row nowrap;\n\talign-items: stretch;\n\toverflow: hidden;\n\tflex: 1 1 auto;\n\talign-self: stretch;\n\tmargin: 0;\n\tbox-shadow: 0 0 0 1px var(--mol_theme_line);\n\t/* transform: translateZ(0); */\n\ttransition: none;\n\toverflow: auto;\n\tscroll-snap-type: x proximity;\n}\n\n[mol_book2] > * {\n\tflex: none;\n\tscroll-snap-stop: always;\n\tscroll-snap-align: end;\n\tposition: relative;\n\t/* z-index: 0; */\n\tmin-height: 100%;\n\tmax-height: 100%;\n\tmax-width: 100%;\n}\n\n[mol_book2] > [mol_view] {\n\ttransform: none; /* prevent content clipping */\n}\n\n[mol_book2_placeholder] {\n\tflex: 1 1 0;\n\t/* background: var(--mol_theme_back); */\n}\n");
+    $.$mol_style_attach("mol/book2/book2.view.css", "[mol_book2] {\n\tdisplay: flex;\n\tflex-flow: row nowrap;\n\talign-items: stretch;\n\toverflow: hidden;\n\tflex: 1 1 auto;\n\talign-self: stretch;\n\tmargin: 0;\n\tbox-shadow: 0 0 0 1px var(--mol_theme_line);\n\t/* transform: translateZ(0); */\n\ttransition: none;\n\toverflow: auto;\n\tscroll-snap-type: x proximity;\n}\n\n[mol_book2] > * {\n/* \tflex: none; */\n\tscroll-snap-stop: always;\n\tscroll-snap-align: end;\n\tposition: relative;\n\t/* z-index: 0; */\n\tmin-height: 100%;\n\tmax-height: 100%;\n\tmax-width: 100%;\n}\n\n[mol_book2] > [mol_view] {\n\ttransform: none; /* prevent content clipping */\n}\n\n[mol_book2_placeholder] {\n\tflex: 1 1 0;\n\t/* background: var(--mol_theme_back); */\n}\n");
 })($ || ($ = {}));
 //book2.view.css.js.map
 ;
@@ -3256,12 +3253,11 @@ var $;
     (function ($$) {
         class $mol_book2 extends $.$mol_book2 {
             title() {
-                return this.pages().map(page => page === null || page === void 0 ? void 0 : page.title()).reverse().filter(Boolean).join(' | ');
+                return this.pages().map(page => page?.title()).reverse().filter(Boolean).join(' | ');
             }
             sub() {
-                var _a;
                 const next = [...this.pages().slice(), this.Placeholder()];
-                const prev = (_a = $.$mol_mem_cached(() => this.sub())) !== null && _a !== void 0 ? _a : [];
+                const prev = $.$mol_mem_cached(() => this.sub()) ?? [];
                 for (let i = 1; i++;) {
                     const p = prev[prev.length - i];
                     const n = next[next.length - i];
@@ -3373,14 +3369,13 @@ var $;
             uri_listener() {
                 const node = this.dom_node();
                 return new $.$mol_dom_listener($.$mol_dom_context, 'message', $.$mol_fiber_root((event) => {
-                    var _a;
                     if (event.source !== node.contentWindow)
                         return;
                     if (!Array.isArray(event.data))
                         return;
                     if (event.data[0] !== 'hashchange')
                         return;
-                    (_a = this._uri_sync) === null || _a === void 0 ? void 0 : _a.destructor();
+                    this._uri_sync?.destructor();
                     this._uri_sync = $.$mol_fiber.current;
                     $.$mol_wait_timeout(1000);
                     this.uri(event.data[1]);
@@ -3471,8 +3466,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    var _a;
-    const TextDecoder = (_a = globalThis.TextDecoder) !== null && _a !== void 0 ? _a : $node.util.TextDecoder;
+    const TextDecoder = globalThis.TextDecoder ?? $node.util.TextDecoder;
     function $mol_charset_decode(value, code = 'utf8') {
         return new TextDecoder(code).decode(value);
     }
@@ -3483,8 +3477,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    var _a;
-    const TextEncoder = (_a = globalThis.TextEncoder) !== null && _a !== void 0 ? _a : $node.util.TextEncoder;
+    const TextEncoder = globalThis.TextEncoder ?? $node.util.TextEncoder;
     const encoder = new TextEncoder();
     function $mol_charset_encode(value) {
         return encoder.encode(value);
@@ -3714,7 +3707,7 @@ var $;
             const path = this.path();
             this.parent().watcher();
             try {
-                stat = next !== null && next !== void 0 ? next : stat_convert($node.fs.statSync(path));
+                stat = next ?? stat_convert($node.fs.statSync(path));
             }
             catch (error) {
                 if (error.code === 'ENOENT')
@@ -3936,9 +3929,96 @@ var $;
 "use strict";
 var $;
 (function ($) {
+    class $mol_state_arg extends $.$mol_object {
+        constructor(prefix = '') {
+            super();
+            this.prefix = prefix;
+        }
+        static href(next) {
+            return next || process.argv.slice(2).join(' ');
+        }
+        static dict(next) {
+            if (next !== void 0)
+                this.href(this.make_link(next));
+            var href = this.href();
+            var chunks = href.split(' ');
+            var params = {};
+            chunks.forEach(chunk => {
+                if (!chunk)
+                    return;
+                var vals = chunk.split('=').map(decodeURIComponent);
+                params[vals.shift()] = vals.join('=');
+            });
+            return params;
+        }
+        static value(key, next) {
+            if (next === void 0)
+                return this.dict()[key] || null;
+            this.href(this.link({ [key]: next }));
+            return next;
+        }
+        static link(next) {
+            var params = {};
+            var prev = this.dict();
+            for (var key in prev) {
+                params[key] = prev[key];
+            }
+            for (var key in next) {
+                params[key] = next[key];
+            }
+            return this.make_link(params);
+        }
+        static make_link(next) {
+            var chunks = [];
+            for (var key in next) {
+                if (null == next[key])
+                    continue;
+                chunks.push([key].concat(next[key]).map(encodeURIComponent).join('='));
+            }
+            return chunks.join(' ');
+        }
+        value(key, next) {
+            return this.constructor.value(this.prefix + key, next);
+        }
+        sub(postfix) {
+            return new this.constructor(this.prefix + postfix + '.');
+        }
+        link(next) {
+            var prefix = this.prefix;
+            var dict = {};
+            for (var key in next) {
+                dict[prefix + key] = next[key];
+            }
+            return this.constructor.link(dict);
+        }
+    }
+    __decorate([
+        $.$mol_mem
+    ], $mol_state_arg, "href", null);
+    __decorate([
+        $.$mol_mem
+    ], $mol_state_arg, "dict", null);
+    __decorate([
+        $.$mol_mem_key
+    ], $mol_state_arg, "value", null);
+    $.$mol_state_arg = $mol_state_arg;
+})($ || ($ = {}));
+//arg.node.js.map
+;
+"use strict";
+var $;
+(function ($) {
+    function parse(theme) {
+        if (theme === 'on')
+            return true;
+        if (theme === 'off')
+            return false;
+        return null;
+    }
     function $mol_lights(next) {
-        var _a;
-        return (_a = this.$mol_state_local.value('$mol_lights', next)) !== null && _a !== void 0 ? _a : $.$mol_dom_context.matchMedia('(prefers-color-scheme: light)').matches;
+        return this.$mol_state_local.value('$mol_lights', next)
+            ?? parse(this.$mol_state_arg.value('mol_lights'))
+            ?? $.$mol_dom_context.matchMedia('(prefers-color-scheme: light)').matches;
     }
     $.$mol_lights = $mol_lights;
 })($ || ($ = {}));
@@ -4038,85 +4118,6 @@ var $;
     $.$mol_link = $mol_link;
 })($ || ($ = {}));
 //link.view.tree.js.map
-;
-"use strict";
-var $;
-(function ($) {
-    class $mol_state_arg extends $.$mol_object {
-        constructor(prefix = '') {
-            super();
-            this.prefix = prefix;
-        }
-        static href(next) {
-            return next || process.argv.slice(2).join(' ');
-        }
-        static dict(next) {
-            if (next !== void 0)
-                this.href(this.make_link(next));
-            var href = this.href();
-            var chunks = href.split(' ');
-            var params = {};
-            chunks.forEach(chunk => {
-                if (!chunk)
-                    return;
-                var vals = chunk.split('=').map(decodeURIComponent);
-                params[vals.shift()] = vals.join('=');
-            });
-            return params;
-        }
-        static value(key, next) {
-            if (next === void 0)
-                return this.dict()[key] || null;
-            this.href(this.link({ [key]: next }));
-            return next;
-        }
-        static link(next) {
-            var params = {};
-            var prev = this.dict();
-            for (var key in prev) {
-                params[key] = prev[key];
-            }
-            for (var key in next) {
-                params[key] = next[key];
-            }
-            return this.make_link(params);
-        }
-        static make_link(next) {
-            var chunks = [];
-            for (var key in next) {
-                if (null == next[key])
-                    continue;
-                chunks.push([key].concat(next[key]).map(encodeURIComponent).join('='));
-            }
-            return chunks.join(' ');
-        }
-        value(key, next) {
-            return this.constructor.value(this.prefix + key, next);
-        }
-        sub(postfix) {
-            return new this.constructor(this.prefix + postfix + '.');
-        }
-        link(next) {
-            var prefix = this.prefix;
-            var dict = {};
-            for (var key in next) {
-                dict[prefix + key] = next[key];
-            }
-            return this.constructor.link(dict);
-        }
-    }
-    __decorate([
-        $.$mol_mem
-    ], $mol_state_arg, "href", null);
-    __decorate([
-        $.$mol_mem
-    ], $mol_state_arg, "dict", null);
-    __decorate([
-        $.$mol_mem_key
-    ], $mol_state_arg, "value", null);
-    $.$mol_state_arg = $mol_state_arg;
-})($ || ($ = {}));
-//arg.node.js.map
 ;
 "use strict";
 var $;
@@ -4712,16 +4713,15 @@ var $;
                 return this.enabled() ? super.tab_index() : -1;
             }
             error() {
-                var _a, _b;
                 try {
-                    (_a = this.fiber()) === null || _a === void 0 ? void 0 : _a.get();
+                    this.fiber()?.get();
                     return '';
                 }
                 catch (error) {
                     if (error instanceof Promise) {
                         return $.$mol_fail_hidden(error);
                     }
-                    return String((_b = error.message) !== null && _b !== void 0 ? _b : error);
+                    return String(error.message ?? error);
                 }
             }
             hint_or_error() {
@@ -4850,7 +4850,7 @@ var $;
     (function ($$) {
         class $mol_check extends $.$mol_check {
             click(next) {
-                if (next === null || next === void 0 ? void 0 : next.defaultPrevented)
+                if (next?.defaultPrevented)
                     return;
                 this.checked(!this.checked());
                 if (next)
@@ -5018,8 +5018,7 @@ var $;
 var $;
 (function ($) {
     function $mol_support_css_overflow_anchor() {
-        var _a, _b;
-        return (_b = (_a = this.$mol_dom_context.CSS) === null || _a === void 0 ? void 0 : _a.supports('overflow-anchor:auto')) !== null && _b !== void 0 ? _b : false;
+        return this.$mol_dom_context.CSS?.supports('overflow-anchor:auto') ?? false;
     }
     $.$mol_support_css_overflow_anchor = $mol_support_css_overflow_anchor;
 })($ || ($ = {}));
@@ -5046,13 +5045,12 @@ var $;
                 return this.$.$mol_support_css_overflow_anchor();
             }
             view_window() {
-                var _a, _b, _c, _d, _e, _f;
                 const kids = this.sub();
                 if (kids.length < 3)
                     return [0, kids.length];
                 if (this.$.$mol_print.active())
                     return [0, kids.length];
-                let [min, max] = (_a = $.$mol_mem_cached(() => this.view_window())) !== null && _a !== void 0 ? _a : [0, 0];
+                let [min, max] = $.$mol_mem_cached(() => this.view_window()) ?? [0, 0];
                 let max2 = max = Math.min(max, kids.length);
                 let min2 = min = Math.max(0, Math.min(min, max - 1));
                 const anchoring = this.render_visible_only();
@@ -5061,16 +5059,16 @@ var $;
                 const limit_top = -over;
                 const limit_bottom = window_height + over;
                 const rect = this.view_rect();
-                const gap_before = (_b = $.$mol_mem_cached(() => this.gap_before())) !== null && _b !== void 0 ? _b : 0;
-                const gap_after = (_c = $.$mol_mem_cached(() => this.gap_after())) !== null && _c !== void 0 ? _c : 0;
-                let top = Math.ceil((_d = rect === null || rect === void 0 ? void 0 : rect.top) !== null && _d !== void 0 ? _d : 0) + gap_before;
-                let bottom = Math.ceil((_e = rect === null || rect === void 0 ? void 0 : rect.bottom) !== null && _e !== void 0 ? _e : 0) - gap_after;
+                const gap_before = $.$mol_mem_cached(() => this.gap_before()) ?? 0;
+                const gap_after = $.$mol_mem_cached(() => this.gap_after()) ?? 0;
+                let top = Math.ceil(rect?.top ?? 0) + gap_before;
+                let bottom = Math.ceil(rect?.bottom ?? 0) - gap_after;
                 if (top <= limit_top && bottom >= limit_bottom) {
                     return [min2, max2];
                 }
                 if (anchoring && ((bottom < limit_top) || (top > limit_bottom))) {
                     min = 0;
-                    top = Math.ceil((_f = rect === null || rect === void 0 ? void 0 : rect.top) !== null && _f !== void 0 ? _f : 0);
+                    top = Math.ceil(rect?.top ?? 0);
                     while (min < (kids.length - 1)) {
                         const height = kids[min].minimal_height();
                         if (top + height >= limit_top)
@@ -5632,9 +5630,8 @@ var $;
                 return this.data()[app].title;
             }
             app_uri(app, next) {
-                var _a;
                 if (this.app() === app) {
-                    return (_a = this.$.$mol_state_arg.value('uri', next)) !== null && _a !== void 0 ? _a : this.data()[app].uri;
+                    return this.$.$mol_state_arg.value('uri', next) ?? this.data()[app].uri;
                 }
                 else {
                     return this.data()[app].uri;
