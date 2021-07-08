@@ -1502,6 +1502,14 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
+            search: {
+                title: string;
+                uri: string;
+            };
+            talks: {
+                title: string;
+                uri: string;
+            };
             scout: {
                 title: string;
                 uri: string;
