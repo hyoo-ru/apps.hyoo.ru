@@ -5005,10 +5005,6 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_apps_data_piterjs_title'),
                     uri: "https://piterjs.org/"
                 },
-                shelter: {
-                    title: this.$.$mol_locale.text('$hyoo_apps_data_shelter_title'),
-                    uri: "https://shelter.hyoo.ru/#login=user"
-                },
                 fallacy: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_fallacy_title'),
                     uri: "https://fallacy.hyoo.ru/"
@@ -5080,6 +5076,10 @@ var $;
                 questions: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_questions_title'),
                     uri: "https://mol.js.org/app/questions/-/"
+                },
+                shelter: {
+                    title: this.$.$mol_locale.text('$hyoo_apps_data_shelter_title'),
+                    uri: "https://shelter.hyoo.ru/#login=user"
                 },
                 toys: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_toys_title'),

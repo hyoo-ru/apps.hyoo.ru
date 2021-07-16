@@ -1541,10 +1541,6 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
-            shelter: {
-                title: string;
-                uri: string;
-            };
             fallacy: {
                 title: string;
                 uri: string;
@@ -1614,6 +1610,10 @@ declare namespace $ {
                 uri: string;
             };
             questions: {
+                title: string;
+                uri: string;
+            };
+            shelter: {
                 title: string;
                 uri: string;
             };
