@@ -1504,8 +1504,39 @@ declare namespace $.$$ {
 }
 
 declare namespace $ {
-    class $mol_icon_open_in_new extends $mol_icon {
-        path(): string;
+    class $mol_image extends $mol_view {
+        dom_name(): string;
+        field(): {
+            src: string;
+            alt: string;
+        };
+        uri(): string;
+    }
+}
+
+declare namespace $ {
+}
+
+declare namespace $ {
+    class $mol_link_iconed extends $mol_link {
+        sub(): readonly any[];
+        content(): readonly any[];
+        host(): string;
+        icon(): string;
+        Icon(): $mol_image;
+        title(): string;
+    }
+}
+
+declare namespace $ {
+}
+
+declare namespace $.$$ {
+    class $mol_link_iconed extends $.$mol_link_iconed {
+        icon(): string;
+        host(): string;
+        title(): string;
+        sub(): any[];
     }
 }
 
@@ -1631,8 +1662,7 @@ declare namespace $ {
         app_title(id: any): string;
         app_arg(id: any): {};
         Menu_link_in(id: any): $$.$mol_link;
-        Menu_link_out_icon(id: any): $mol_icon_open_in_new;
-        Menu_link_out(id: any): $$.$mol_link;
+        Menu_link_out(id: any): $$.$mol_link_iconed;
         app_uri(id: any, val?: any): string;
     }
 }
