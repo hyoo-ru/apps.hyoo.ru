@@ -3074,7 +3074,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    class $mol_frame extends $.$mol_view {
+    class $mol_frame extends $.$mol_scroll {
         dom_name() {
             return "iframe";
         }
