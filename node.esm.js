@@ -5324,7 +5324,7 @@ var $;
                 },
                 talks: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_talks_title'),
-                    uri: "https://talks.hyoo.ru/#!chat=RXV3H2EC"
+                    uri: "https://talks.hyoo.ru/#!roster/chat=RXV3H2EC"
                 },
                 scout: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_scout_title'),
