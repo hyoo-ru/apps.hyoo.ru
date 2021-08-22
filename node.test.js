@@ -5547,7 +5547,7 @@ var $;
                 if (this.app() === app) {
                     const arg = this.$.$mol_state_arg.value('uri', next);
                     if (arg)
-                        return arg;
+                        return arg.replace(/mol_lights=(true|false)/, `mol_lights=${lights}`);
                 }
                 return this.app_uri_default(app) + `#mol_lights=${lights}`;
             }
