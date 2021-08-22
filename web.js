@@ -5342,12 +5342,13 @@ var $;
                 return this.data()[app].uri;
             }
             app_uri_embed(app, next) {
+                const lights = this.$.$mol_lights();
                 if (this.app() === app) {
                     const arg = this.$.$mol_state_arg.value('uri', next);
                     if (arg)
                         return arg;
                 }
-                return this.app_uri_default(app) + `#mol_lights=${this.$.$mol_lights()}`;
+                return this.app_uri_default(app) + `#mol_lights=${lights}`;
             }
             app_arg(app) {
                 return { app, uri: null };
