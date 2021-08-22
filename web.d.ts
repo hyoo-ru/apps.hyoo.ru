@@ -1661,8 +1661,9 @@ declare namespace $ {
         app_title(id: any): string;
         app_arg(id: any): {};
         Menu_link_in(id: any): $$.$mol_link;
+        app_uri_default(id: any): string;
         Menu_link_out(id: any): $$.$mol_link_iconed;
-        app_uri(id: any, val?: any): string;
+        app_uri_embed(id: any, val?: any): string;
     }
 }
 
@@ -1675,7 +1676,8 @@ declare namespace $.$$ {
         menu_items(): $mol_view[];
         pages(): ($mol_frame | $mol_page)[];
         app_title(app: string): any;
-        app_uri(app: string, next?: string): any;
+        app_uri_default(app: string, next?: string): any;
+        app_uri_embed(app: string, next?: string): string;
         app_arg(app: string): {
             app: string;
             uri: null;
