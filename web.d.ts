@@ -1559,6 +1559,10 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
+            draw: {
+                title: string;
+                uri: string;
+            };
             scout: {
                 title: string;
                 uri: string;

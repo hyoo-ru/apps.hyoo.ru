@@ -5318,6 +5318,10 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_apps_data_talks_title'),
                     uri: "https://talks.hyoo.ru/#!roster/chat=RXV3H2EC"
                 },
+                draw: {
+                    title: this.$.$mol_locale.text('$hyoo_apps_data_draw_title'),
+                    uri: "https://draw.hyoo.ru/"
+                },
                 scout: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_scout_title'),
                     uri: "https://scout.hyoo.ru/"
