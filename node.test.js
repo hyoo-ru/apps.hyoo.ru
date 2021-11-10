@@ -389,6 +389,9 @@ var $;
         static hsla(hue, saturation, lightness, alpha) {
             return new $mol_style_func('hsla', [hue, per(saturation), per(lightness), alpha]);
         }
+        static clamp(min, mid, max) {
+            return new $mol_style_func('clamp', [min, mid, max]);
+        }
         static rgba(red, green, blue, alpha) {
             return new $mol_style_func('rgba', [red, green, blue, alpha]);
         }
@@ -5358,6 +5361,10 @@ var $;
                 fallacy: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_fallacy_title'),
                     uri: "https://fallacy.hyoo.ru/"
+                },
+                meme: {
+                    title: this.$.$mol_locale.text('$hyoo_apps_data_meme_title'),
+                    uri: "https://meme.hyoo.ru/"
                 },
                 calc: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_calc_title'),
