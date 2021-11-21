@@ -771,6 +771,7 @@ declare namespace $ {
         readonly text: $mol_style_func<"var", "--mol_gap_text">;
         readonly round: $mol_style_func<"var", "--mol_gap_round">;
         readonly space: $mol_style_func<"var", "--mol_gap_space">;
+        readonly blur: $mol_style_func<"var", "--mol_gap_blur">;
     };
 }
 
@@ -1544,6 +1545,10 @@ declare namespace $ {
                 uri: string;
             };
             search: {
+                title: string;
+                uri: string;
+            };
+            map: {
                 title: string;
                 uri: string;
             };
