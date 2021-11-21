@@ -1,8 +1,9 @@
 {
 	"$hyoo_apps_Menu_title": "Приложения от HyOO",
 	"$hyoo_apps_data_offer_title": "Бизнес предложение от HyOO",
-	"$hyoo_apps_data_mol_title": "$mol фреймворк",
+	"$hyoo_apps_data_mol_title": "$mol Фреймворк",
 	"$hyoo_apps_data_search_title": "Веб Поисковик",
+	"$hyoo_apps_data_map_title": "Карта Земли",
 	"$hyoo_apps_data_talks_title": "Мессенджер",
 	"$hyoo_apps_data_draw_title": "Рисовалка",
 	"$hyoo_apps_data_scout_title": "Игротека вожатого",
