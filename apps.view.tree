@@ -4,7 +4,7 @@ $hyoo_apps $mol_book2
 		<= Theme $mol_theme_auto
 	pages /
 		<= Menu $mol_page
-			title @ \HyOO Apps
+			title @ \$hyoo apps
 			tools /
 				<= Source $mol_link_source uri \https://github.com/hyoo-ru/apps.hyoo.ru
 				<= Lights $mol_lights_toggle
@@ -23,7 +23,7 @@ $hyoo_apps $mol_book2
 		uri?val <=> app_uri_embed!id?val \
 	data *
 		offer *
-			title @ \HyOO Business Offer
+			title @ \$hyoo Business Offer
 			uri \https://offer.hyoo.ru/
 		mol *
 			title @ \$mol UI Framework
@@ -49,6 +49,9 @@ $hyoo_apps $mol_book2
 		fallacy *
 			title @ \Fallacies Collection
 			uri \https://fallacy.hyoo.ru/
+		meme *
+			title @ \Meme maker
+			uri \https://meme.hyoo.ru/
 		calc *
 			title @ \Spreadsheet
 			uri \https://calc.hyoo.ru/#title=a*x**2%20%2B%20b*x%20%2B%20c%20%3D%200/A1=a/B2=6/A2=3/B1=b/C1=c/E1=D/E2=%3D%20B2**2%20-%204*A2*C2/G1=x1/G2=%3D%20%28%20-B2%20%2B%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/H1=x2/H2=%3D%20%28%20-B2%20-%20sqrt%28E2%29%20%29%20%2F%202%20%2F%20A2/C2=0
