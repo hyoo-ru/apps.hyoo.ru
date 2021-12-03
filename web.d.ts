@@ -1539,7 +1539,7 @@ declare namespace $.$$ {
         icon(): string;
         host(): string;
         title(): string;
-        sub(): any[];
+        sub(): readonly any[];
     }
 }
 
