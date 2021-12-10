@@ -590,10 +590,16 @@ var $;
         static get promise() {
             if (this._promise)
                 return this._promise;
-            return this._promise = new Promise(done => requestAnimationFrame(() => {
-                this._promise = null;
-                done();
-            }));
+            return this._promise = new Promise(done => {
+                requestAnimationFrame(() => {
+                    this._promise = null;
+                    done();
+                });
+                setTimeout(() => {
+                    this._promise = null;
+                    done();
+                }, 100);
+            });
         }
         cancelled = false;
         promise;
@@ -5326,6 +5332,10 @@ var $;
                 notes: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_notes_title'),
                     uri: "https://notes.hyoo.ru/#"
+                },
+                play: {
+                    title: this.$.$mol_locale.text('$hyoo_apps_data_play_title'),
+                    uri: "https://play.hyoo.ru/"
                 },
                 invest: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_invest_title'),
