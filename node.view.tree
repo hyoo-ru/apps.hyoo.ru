@@ -207,7 +207,7 @@ $hyoo_apps $mol_book2
 	App!id $mol_frame
 		uri?val <=> app_uri_embed!id?val \
 	data *
-		offer *
+		- offer *
 			title @ \$hyoo Business Offer
 			uri \https://offer.hyoo.ru/
 		mol *

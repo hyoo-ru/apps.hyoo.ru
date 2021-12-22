@@ -5474,10 +5474,6 @@ var $;
         }
         data() {
             return {
-                offer: {
-                    title: this.$.$mol_locale.text('$hyoo_apps_data_offer_title'),
-                    uri: "https://offer.hyoo.ru/"
-                },
                 mol: {
                     title: this.$.$mol_locale.text('$hyoo_apps_data_mol_title'),
                     uri: "https://mol.hyoo.ru/"

@@ -1538,10 +1538,6 @@ declare namespace $ {
         Menu_item(id: any): $mol_view;
         App(id: any): $$.$mol_frame;
         data(): {
-            offer: {
-                title: string;
-                uri: string;
-            };
             mol: {
                 title: string;
                 uri: string;
