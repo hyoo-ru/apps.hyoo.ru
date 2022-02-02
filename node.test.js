@@ -5529,6 +5529,12 @@ var $;
             const obj = new this.$.$mol_lights_toggle();
             return obj;
         }
+        tools() {
+            return [
+                this.Source(),
+                this.Lights()
+            ];
+        }
         menu_items() {
             return [];
         }
@@ -5540,10 +5546,7 @@ var $;
         Menu() {
             const obj = new this.$.$mol_page();
             obj.title = () => this.$.$mol_locale.text('$hyoo_apps_Menu_title');
-            obj.tools = () => [
-                this.Source(),
-                this.Lights()
-            ];
+            obj.tools = () => this.tools();
             obj.body = () => [
                 this.Menu_items()
             ];
