@@ -1688,6 +1688,10 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
+            gazporn: {
+                title: string;
+                uri: string;
+            };
             toys: {
                 title: string;
                 uri: string;
