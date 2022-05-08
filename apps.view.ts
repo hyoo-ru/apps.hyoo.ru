@@ -6,11 +6,24 @@ namespace $.$$ {
 			return this.$.$mol_state_arg.value( 'app' )
 		}
 		
-		@ $mol_mem
-		menu_items() {
-			return Object.keys( this.data() ).map( app => this.Menu_item( app ) )
+		group_name( id: string ) {
+			return this.groups()[ id ]
 		}
 		
+		@ $mol_mem
+		group_list() {
+			return Object.keys( this.groups() ).map( group => this.Group( group ) )
+		}
+		
+		@ $mol_mem_key
+		group_items( group: string ) {
+			const apps = this.apps()
+			return Object.keys( this.apps() )
+				.filter( app => apps[ app ].target === group )
+				.map( app => this.Menu_item( app ) )
+		}
+		
+		@ $mol_mem
 		pages() {
 			const app = this.app()
 			return [
@@ -19,12 +32,12 @@ namespace $.$$ {
 			]
 		}
 		
-		app_title( app: string ) {
-			return this.data()[ app ].title
+		app_title( app: [ string, string ] ) {
+			return this.apps()[ app ].title
 		}
 		
-		app_uri_default( app: string, next?: string ) {
-			return this.data()[ app ].uri
+		app_uri_default( app : string, next?: string ) {
+			return this.apps()[ app ].uri
 		}
 		
 		@ $mol_mem_key
