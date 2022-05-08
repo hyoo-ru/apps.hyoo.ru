@@ -11,7 +11,7 @@ $hyoo_apps $mol_book2
 			body /
 				<= Menu_items $mol_list
 					rows <= group_list /
-						<= Group* $mol_expander
+						<= Group*id $mol_expander
 							title <= group_name* \
 							expanded? <=> group_expanded*? true
 							content <= group_items* /
@@ -23,7 +23,7 @@ $hyoo_apps $mol_book2
 										<= Menu_link_out* $mol_link_iconed
 											uri <= app_uri_default* \
 											title \
-		<= App* $mol_frame
+		<= App*id $mol_frame
 			uri? <=> app_uri_embed*? \
 	groups *
 		release @ \For All

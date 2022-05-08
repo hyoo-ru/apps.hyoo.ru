@@ -32,7 +32,7 @@ namespace $.$$ {
 			]
 		}
 		
-		app_title( app: [ string, string ] ) {
+		app_title( app: string ) {
 			return this.apps()[ app ].title
 		}
 		
