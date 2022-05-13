@@ -5774,11 +5774,6 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_tree_title'),
                     uri: "https://tree.hyoo.ru/"
                 },
-                issues: {
-                    target: "develop",
-                    title: this.$.$mol_locale.text('$hyoo_apps_apps_issues_title'),
-                    uri: "https://compare.github.hyoo.ru/#projects=hyoo-ru%2Fmam_mol%2Cfacebook%2Freact%2Cvuejs%2Fvue"
-                },
                 icons: {
                     target: "develop",
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_icons_title'),
