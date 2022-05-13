@@ -133,7 +133,7 @@ $hyoo_apps $mol_book2
 		jsperf *
 			target \develop
 			title @ \JS Performance Tool
-			uri \https://perf.js.hyoo.ru/#sources=%5B%22window.location.href%3B%22%2C%22document.location.href%3B%22%5D/prefix/postfix/optimized=true
+			uri \https://perf.js.hyoo.ru/
 		bench *
 			target \develop
 			title @ \Online Benchmark
