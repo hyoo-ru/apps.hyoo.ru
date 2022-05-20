@@ -1,1 +1,3 @@
 deploy \/mol/logo/logo.svg
+
+include \/mol/offline/install
