@@ -162,6 +162,13 @@ declare namespace $ {
 }
 
 declare namespace $ {
+    function $mol_offline(uri?: string): void;
+}
+
+declare namespace $ {
+}
+
+declare namespace $ {
     class $mol_after_tick extends $mol_object2 {
         task: () => void;
         promise: any;
