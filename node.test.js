@@ -4685,7 +4685,9 @@ var $;
                 return url.hostname;
             }
             title() {
-                return decodeURIComponent(this.uri().split(this.host(), 2)[1]).replace(/^\//, ' ');
+                const suffix = this.uri().split(this.host(), 2)[1].replace(/^[\/\?#!]+/, '')
+                    || this.host();
+                return decodeURIComponent(suffix).replace(/^\//, ' ');
             }
             sub() {
                 return [
@@ -5585,6 +5587,11 @@ var $;
         }
         apps() {
             return {
+                board: {
+                    target: "release",
+                    title: this.$.$mol_locale.text('$hyoo_apps_apps_board_title'),
+                    uri: "https://board.hyoo.ru/"
+                },
                 notes: {
                     target: "release",
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_notes_title'),
