@@ -142,6 +142,10 @@ $mol_link_iconed $mol_link
 		<= title <= uri
 	host \
 
+$mol_icon_chevron $mol_icon path \M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z
+
+$mol_icon_chevron_right $mol_icon path \M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z
+
 $mol_list $mol_view
 	render_visible_only true
 	render_over 0
@@ -152,8 +156,6 @@ $mol_list $mol_view
 	view_window /
 		0
 		0
-
-$mol_icon_chevron $mol_icon path \M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z
 
 $mol_check_expand $mol_check
 	Icon $mol_icon_chevron
@@ -245,12 +247,14 @@ $hyoo_apps $mol_book2
 							content <= group_items* /
 								<= Menu_item* $mol_view
 									sub /
-										<= Menu_link_in* $mol_link
-											title <= app_title* \
-											arg <= app_arg* *
 										<= Menu_link_out* $mol_link_iconed
 											uri <= app_uri_default* \
-											title \
+											title <= app_title* \
+											arg <= app_arg* *
+										<= Menu_link_in* $mol_link
+											arg <= app_arg* *
+											sub /
+												<= Menu_link_in_icon* $mol_icon_chevron_right
 		<= App*id $mol_frame
 			uri? <=> app_uri_embed*? \
 	groups *

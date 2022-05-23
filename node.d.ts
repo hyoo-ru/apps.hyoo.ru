@@ -1456,6 +1456,18 @@ declare namespace $.$$ {
 }
 
 declare namespace $ {
+    class $mol_icon_chevron extends $mol_icon {
+        path(): string;
+    }
+}
+
+declare namespace $ {
+    class $mol_icon_chevron_right extends $mol_icon {
+        path(): string;
+    }
+}
+
+declare namespace $ {
     class $mol_list extends $mol_view {
         render_visible_only(): boolean;
         render_over(): number;
@@ -1487,12 +1499,6 @@ declare namespace $.$$ {
         sub_visible(): $mol_view[];
         minimal_height(): number;
         force_render(path: Set<$mol_view>): void;
-    }
-}
-
-declare namespace $ {
-    class $mol_icon_chevron extends $mol_icon {
-        path(): string;
     }
 }
 
@@ -1830,11 +1836,12 @@ declare namespace $ {
         tools(): readonly any[];
         group_name(id: any): string;
         group_expanded(id: any, next?: any): boolean;
+        app_uri_default(id: any): string;
         app_title(id: any): string;
         app_arg(id: any): {};
-        Menu_link_in(id: any): $$.$mol_link;
-        app_uri_default(id: any): string;
         Menu_link_out(id: any): $$.$mol_link_iconed;
+        Menu_link_in_icon(id: any): $mol_icon_chevron_right;
+        Menu_link_in(id: any): $$.$mol_link;
         Menu_item(id: any): $mol_view;
         group_items(id: any): readonly any[];
         Group(id: any): $$.$mol_expander;
