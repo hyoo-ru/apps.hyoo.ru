@@ -6,11 +6,7 @@
 	padding: var(--mol_gap_block);
 }
 
-[hyoo_apps_group_content] {
-	padding-left: var(--mol_gap_block);
-}
-
-[hyoo_apps_menu_link_in] {
+[hyoo_apps_menu_link_out] {
 	flex-grow: 1;
 }
 
