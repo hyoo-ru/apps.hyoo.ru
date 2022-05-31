@@ -1749,26 +1749,7 @@ var $;
             }
         }
         resync(...args) {
-            let res;
-            try {
-                res = this.recall(...args);
-            }
-            catch (error) {
-                if (error instanceof Promise)
-                    $mol_fail_hidden(error);
-                res = error;
-            }
-            try {
-                this.once();
-            }
-            catch (error) {
-                if (error instanceof Promise)
-                    $mol_fail_hidden(error);
-            }
-            return this.put(res);
-        }
-        recall(...args) {
-            return this.task.call(this.host, ...args);
+            return this.put(this.task.call(this.host, ...args));
         }
         once() {
             return this.sync();
@@ -1817,9 +1798,6 @@ var $;
     __decorate([
         $mol_wire_method
     ], $mol_wire_atom.prototype, "resync", null);
-    __decorate([
-        $mol_wire_method
-    ], $mol_wire_atom.prototype, "recall", null);
     __decorate([
         $mol_wire_method
     ], $mol_wire_atom.prototype, "once", null);
@@ -5721,6 +5699,11 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_jsperf_title'),
                     uri: "https://perf.js.hyoo.ru/#!prefix=let%20res/sources=%5B\"res%20%3D%20window.location.href\"%2C\"res%20%3D%20document.location.href\"%2C\"res%20%3D%20location.href\"%5D/postfix=%24mol_assert_like%28%20res%2C%20location.href%20%29"
                 },
+                jsopt: {
+                    target: "develop",
+                    title: this.$.$mol_locale.text('$hyoo_apps_apps_jsopt_title'),
+                    uri: "https://opt.js.hyoo.ru/"
+                },
                 bench: {
                     target: "develop",
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_bench_title'),
@@ -7044,33 +7027,6 @@ var $;
             ], App, "test", null);
             App.test();
         },
-        'Update deps on push'($) {
-            class App extends $mol_object2 {
-                static $ = $;
-                static left(next = false) {
-                    return next;
-                }
-                static right(next = false) {
-                    return next;
-                }
-                static res(next) {
-                    return this.left(next) && this.right();
-                }
-            }
-            __decorate([
-                $mol_wire_mem(0)
-            ], App, "left", null);
-            __decorate([
-                $mol_wire_mem(0)
-            ], App, "right", null);
-            __decorate([
-                $mol_wire_mem(0)
-            ], App, "res", null);
-            $mol_assert_equal(App.res(), false);
-            $mol_assert_equal(App.res(true), false);
-            $mol_assert_equal(App.right(true), true);
-            $mol_assert_equal(App.res(), true);
-        },
         'Different order of pull and push'($) {
             class App extends $mol_object2 {
                 static $ = $;
@@ -7081,6 +7037,8 @@ var $;
                     return this.store(next);
                 }
                 static slow(next) {
+                    if (next !== undefined)
+                        this.slow();
                     return this.store(next);
                 }
             }
