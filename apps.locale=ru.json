@@ -34,6 +34,7 @@
 	"$hyoo_apps_apps_iq_title": "Коэффициент интеллекта",
 	"$hyoo_apps_apps_jseval_title": "Мгновенная JS песочница",
 	"$hyoo_apps_apps_jsperf_title": "Производительность JS кода",
+	"$hyoo_apps_apps_jsopt_title": "Оптимизации JS кода",
 	"$hyoo_apps_apps_issues_title": "Сравнение GitHub проектов",
 	"$hyoo_apps_apps_tree_title": "Tree песочница",
 	"$hyoo_apps_apps_gazporn_title": "Дашборд руководителя",
