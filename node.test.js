@@ -5852,7 +5852,7 @@ var $;
                 talks: {
                     target: "preview",
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_talks_title'),
-                    uri: "https://talks.hyoo.ru/#!roster/chat=RXV3H2EC"
+                    uri: "https://talks.hyoo.ru/#!chat=fsh1o2_jdzewo"
                 },
                 draw: {
                     target: "preview",
