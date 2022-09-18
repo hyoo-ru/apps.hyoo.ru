@@ -1728,6 +1728,11 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
+            talks: {
+                target: string;
+                title: string;
+                uri: string;
+            };
             map: {
                 target: string;
                 title: string;
@@ -1773,11 +1778,6 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
-            talks: {
-                target: string;
-                title: string;
-                uri: string;
-            };
             draw: {
                 target: string;
                 title: string;
@@ -1819,6 +1819,11 @@ declare namespace $ {
                 uri: string;
             };
             mol: {
+                target: string;
+                title: string;
+                uri: string;
+            };
+            sync: {
                 target: string;
                 title: string;
                 uri: string;
