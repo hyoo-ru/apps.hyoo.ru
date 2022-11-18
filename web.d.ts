@@ -1436,11 +1436,13 @@ declare namespace $ {
             src: string;
             alt: string;
             loading: string;
+            decoding: string;
         };
         minimal_width(): number;
         minimal_height(): number;
         uri(): string;
         loading(): string;
+        decoding(): string;
     }
 }
 
