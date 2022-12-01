@@ -1742,6 +1742,11 @@ declare namespace $ {
             preview: string;
         };
         apps(): {
+            idea: {
+                target: string;
+                title: string;
+                uri: string;
+            };
             board: {
                 target: string;
                 title: string;

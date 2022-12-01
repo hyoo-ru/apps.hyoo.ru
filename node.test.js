@@ -5841,6 +5841,11 @@ var $;
         }
         apps() {
             return {
+                idea: {
+                    target: "release",
+                    title: this.$.$mol_locale.text('$hyoo_apps_apps_idea_title'),
+                    uri: "https://idea.hyoo.ru/"
+                },
                 board: {
                     target: "release",
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_board_title'),
