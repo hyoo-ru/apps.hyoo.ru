@@ -113,7 +113,6 @@
     "$mol_lights",
     "$mol_state_arg",
     "$mol_action",
-    "$mol_media",
     "$mol_link_source",
     "$mol_link",
     "$mol_icon_github_circle",
