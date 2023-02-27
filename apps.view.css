@@ -9,3 +9,7 @@
 [hyoo_apps_app] {
 	flex: 1 0 25rem;
 }
+
+[hyoo_apps_filter] {
+	align-self: stretch;
+}

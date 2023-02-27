@@ -18,8 +18,14 @@ namespace $.$$ {
 		@ $mol_mem_key
 		group_items( group: string ) {
 			const apps = this.apps()
+			const filter = this.filter()
 			return Object.keys( this.apps() )
 				.filter( app => apps[ app ].target === group )
+				.filter( $mol_match_text( filter, app => [
+					app,
+					apps[ app ].title,
+					apps[ app ].uri,
+				] ) )
 				.map( app => this.Menu_item( app ) )
 		}
 		
