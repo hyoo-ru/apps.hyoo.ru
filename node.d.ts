@@ -1835,6 +1835,11 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
+            artist: {
+                target: string;
+                title: string;
+                uri: string;
+            };
             invest: {
                 target: string;
                 title: string;
