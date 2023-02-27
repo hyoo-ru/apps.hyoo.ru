@@ -41,5 +41,7 @@
 	"$hyoo_apps_groups_develop": "Для розробників",
 	"$hyoo_apps_groups_preview": "Для допитливих",
 	"$hyoo_apps_groups_release": "Для всіх",
-	"$mol_lights_toggle_hint": "Переключити освітлення"
+	"$mol_lights_toggle_hint": "Переключити освітлення",
+	"$mol_search_Clear_hint": "Очистити",
+	"$mol_search_hint": "Пошук"
 }
