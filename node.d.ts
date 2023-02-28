@@ -2262,6 +2262,11 @@ declare namespace $ {
                 title: string;
                 uri: string;
             };
+            lingua: {
+                target: string;
+                title: string;
+                uri: string;
+            };
             talks: {
                 target: string;
                 title: string;
