@@ -1,5 +1,4 @@
 {
-	"$hyoo_apps_Menu_title": "$hyoo apps",
 	"$hyoo_apps_apps_artist_title": "Artificial Artist",
 	"$hyoo_apps_apps_bench_title": "Online Benchmark",
 	"$hyoo_apps_apps_board_title": "Private Dashboard",
@@ -43,6 +42,7 @@
 	"$hyoo_apps_groups_develop": "For Developers",
 	"$hyoo_apps_groups_preview": "For Curious",
 	"$hyoo_apps_groups_release": "For All",
+	"$hyoo_apps_menu_title": "$hyoo apps",
 	"$mol_lights_toggle_hint": "Toggle lights",
 	"$mol_link_source_hint": "Source code",
 	"$mol_search_Clear_hint": "Clear",

@@ -2387,6 +2387,7 @@ declare namespace $ {
             };
         };
         Theme(): $$.$mol_theme_auto;
+        menu_title(): string;
         Source(): $mol_link_source;
         Lights(): $$.$mol_lights_toggle;
         tools(): readonly any[];

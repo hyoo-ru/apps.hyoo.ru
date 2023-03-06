@@ -3727,6 +3727,8 @@ var $;
 (function ($) {
     class $mol_state_arg extends $mol_object {
         prefix;
+        static prolog = '';
+        static separator = ' ';
         static href(next) {
             return next || process.argv.slice(2).join(' ');
         }
@@ -7552,6 +7554,9 @@ var $;
             const obj = new this.$.$mol_theme_auto();
             return obj;
         }
+        menu_title() {
+            return this.$.$mol_locale.text('$hyoo_apps_menu_title');
+        }
         Source() {
             const obj = new this.$.$mol_link_source();
             obj.uri = () => "https://github.com/hyoo-ru/apps.hyoo.ru";
@@ -7659,7 +7664,7 @@ var $;
         }
         Menu() {
             const obj = new this.$.$mol_page();
-            obj.title = () => this.$.$mol_locale.text('$hyoo_apps_Menu_title');
+            obj.title = () => this.menu_title();
             obj.tools = () => this.tools();
             obj.head = () => [
                 this.Menu_title(),

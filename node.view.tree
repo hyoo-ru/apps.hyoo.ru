@@ -391,7 +391,7 @@ $hyoo_apps $mol_book2
 		<= Theme $mol_theme_auto
 	pages /
 		<= Menu $mol_page
-			title @ \$hyoo apps
+			title <= menu_title @ \$hyoo apps
 			tools <= tools /
 				<= Source $mol_link_source uri \https://github.com/hyoo-ru/apps.hyoo.ru
 				<= Lights $mol_lights_toggle

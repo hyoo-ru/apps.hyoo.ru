@@ -1,5 +1,4 @@
 {
-	"$hyoo_apps_Menu_title": "$hyoo приложения",
 	"$hyoo_apps_apps_artist_title": "Искусственный художник",
 	"$hyoo_apps_apps_bench_title": "Онлайн бенчмарки",
 	"$hyoo_apps_apps_board_title": "Личный дашборд",
@@ -43,6 +42,7 @@
 	"$hyoo_apps_groups_develop": "Для разработчиков",
 	"$hyoo_apps_groups_preview": "Для любопытных",
 	"$hyoo_apps_groups_release": "Для всех",
+	"$hyoo_apps_menu_title": "$hyoo приложения",
 	"$mol_lights_toggle_hint": "Переключить освещение",
 	"$mol_link_source_hint": "Исходные коды",
 	"$mol_search_Clear_hint": "Очистить",

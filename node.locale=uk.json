@@ -1,5 +1,4 @@
 {
-	"$hyoo_apps_Menu_title": "$hyoo застосунки",
 	"$hyoo_apps_apps_bench_title": "Онлайн-бенчмарки",
 	"$hyoo_apps_apps_board_title": "Особистий дашборд",
 	"$hyoo_apps_apps_calc_title": "Електронна таблиця",
@@ -41,6 +40,7 @@
 	"$hyoo_apps_groups_develop": "Для розробників",
 	"$hyoo_apps_groups_preview": "Для допитливих",
 	"$hyoo_apps_groups_release": "Для всіх",
+	"$hyoo_apps_menu_title": "$hyoo застосунки",
 	"$mol_lights_toggle_hint": "Переключити освітлення",
 	"$mol_search_Clear_hint": "Очистити",
 	"$mol_search_hint": "Пошук"
