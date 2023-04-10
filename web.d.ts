@@ -1048,8 +1048,8 @@ declare namespace $ {
 }
 
 declare namespace $ {
-    function $mol_huggingface_run(this: $, space: string, method: string | number, ...data: readonly any[]): readonly string[];
-    function $mol_huggingface_async(space: string, method: number, ...data: readonly any[]): Promise<[string]> & {
+    function $mol_huggingface_run(this: $, space: string, method: string | number, ...data: readonly any[]): any[] | readonly string[];
+    function $mol_huggingface_async(space: string, method: number, ...data: readonly any[]): Promise<any[]> & {
         destructor: () => void;
     };
 }
@@ -1067,7 +1067,7 @@ declare namespace $ {
         static lang(next?: string): string;
         static source(lang: string): any;
         static texts(lang: string, next?: $mol_locale_dict): $mol_locale_dict;
-        static text(key: string): {} | null;
+        static text(key: string): string;
         static warn(key: string): null;
     }
 }
@@ -1254,7 +1254,7 @@ declare namespace $ {
 
 declare namespace $ {
     class $mol_link_source extends $mol_link {
-        hint(): {} | null;
+        hint(): string;
         sub(): readonly any[];
         Icon(): $mol_icon_github_circle;
     }
@@ -1508,7 +1508,7 @@ declare namespace $ {
 declare namespace $ {
     class $mol_lights_toggle extends $mol_check_icon {
         Icon(): $mol_icon_brightness_6;
-        hint(): {} | null;
+        hint(): string;
         checked(val?: any): boolean;
         Lights_icon(): $mol_icon_brightness_6;
         lights(val?: any): boolean;
@@ -1987,7 +1987,7 @@ declare namespace $ {
         nav_focused(component?: any): any;
         Nav(): $$.$mol_nav;
         suggests_showed(val?: any): boolean;
-        hint(): {} | null;
+        hint(): string;
         submit(event?: any): any;
         enabled(): boolean;
         keyboard(): string;
@@ -2265,214 +2265,214 @@ declare namespace $ {
         plugins(): readonly any[];
         pages(): readonly any[];
         groups(): {
-            release: {} | null;
-            develop: {} | null;
-            preview: {} | null;
+            release: string;
+            develop: string;
+            preview: string;
         };
         apps(): {
             idea: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             board: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             notes: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             page: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             slides: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             search: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             lingua: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             talks: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             map: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             scout: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             fallacy: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             meme: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             calc: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             play: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             life: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             iq: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             todomvc: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             game: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             draw: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             artist: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             invest: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             lamps: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             questions: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             shelter: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             mail: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             gazporn: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             toys: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             mol: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             sync: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             piterjs: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             habhub: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             jseval: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             jsperf: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             jsopt: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             bench: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             toxic: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             request: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             tree: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             icons: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
             rdf: {
                 target: string;
-                title: {} | null;
+                title: string;
                 uri: string;
             };
         };
         Theme(): $$.$mol_theme_auto;
-        menu_title(): {} | null;
+        menu_title(): string;
         Source(): $mol_link_source;
         Lights(): $$.$mol_lights_toggle;
         tools(): readonly any[];
