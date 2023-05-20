@@ -440,6 +440,14 @@ $hyoo_apps $mol_book2
 		develop @ \For Developers
 		preview @ \For Curious
 	apps *
+		studio *
+			target \develop
+			title @ \Online Studio
+			uri \https://studio.hyoo.ru/
+		marked *
+			target \release
+			title @ \MarkedText
+			uri \https://marked.hyoo.ru/
 		idea *
 			target \release
 			title @ \Fresh Ideas Network
