@@ -7452,7 +7452,7 @@ var $;
         group_expanded(id, next) {
             if (next !== undefined)
                 return next;
-            return true;
+            return false;
         }
         app_uri_default(id) {
             return "";
