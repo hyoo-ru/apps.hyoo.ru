@@ -7242,6 +7242,11 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_search_title'),
                     uri: "https://search.hyoo.ru/"
                 },
+                artist: {
+                    target: "release",
+                    title: this.$.$mol_locale.text('$hyoo_apps_apps_artist_title'),
+                    uri: "https://artist.hyoo.ru/"
+                },
                 lingua: {
                     target: "release",
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_lingua_title'),
@@ -7306,11 +7311,6 @@ var $;
                     target: "preview",
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_draw_title'),
                     uri: "https://draw.hyoo.ru/"
-                },
-                artist: {
-                    target: "release",
-                    title: this.$.$mol_locale.text('$hyoo_apps_apps_artist_title'),
-                    uri: "https://artist.hyoo.ru/"
                 },
                 invest: {
                     target: "preview",
