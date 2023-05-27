@@ -20,7 +20,7 @@ $hyoo_apps $mol_book2
 					rows <= group_list /
 						<= Group*id $mol_expander
 							title <= group_name* \
-							expanded? <=> group_expanded*? true
+							expanded? <=> group_expanded*? false
 							content <= group_items* /
 								<= Menu_item* $mol_view
 									sub /
