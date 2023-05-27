@@ -7208,8 +7208,8 @@ var $;
                     uri: "https://studio.hyoo.ru/"
                 },
                 marked: {
-                    target: "release",
-                    title: this.$.$mol_locale.text('$hyoo_apps_apps_marked_title'),
+                    target: "develop",
+                    title: "MarkedText",
                     uri: "https://marked.hyoo.ru/"
                 },
                 idea: {
