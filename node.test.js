@@ -7923,7 +7923,7 @@ var $;
                     uri: "https://draw.hyoo.ru/"
                 },
                 artist: {
-                    target: "preview",
+                    target: "release",
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_artist_title'),
                     uri: "https://artist.hyoo.ru/"
                 },
