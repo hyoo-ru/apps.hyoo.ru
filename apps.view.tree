@@ -127,7 +127,7 @@ $hyoo_apps $mol_book2
 			title @ \Draw Tool
 			uri \https://draw.hyoo.ru/
 		artist *
-			target \preview
+			target \release
 			title @ \Artificial Artist
 			uri \https://artist.hyoo.ru/
 		invest *
