@@ -7294,6 +7294,11 @@ var $;
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_artist_title'),
                     uri: "https://artist.hyoo.ru/"
                 },
+                match: {
+                    target: "release",
+                    title: this.$.$mol_locale.text('$hyoo_apps_apps_match_title'),
+                    uri: "https://match.hyoo.ru/"
+                },
                 lingua: {
                     target: "release",
                     title: this.$.$mol_locale.text('$hyoo_apps_apps_lingua_title'),
@@ -7810,4 +7815,5 @@ var $;
 })($ || ($ = {}));
 //hyoo/apps/apps.view.ts
 
+export default $
 //# sourceMappingURL=web.js.map
