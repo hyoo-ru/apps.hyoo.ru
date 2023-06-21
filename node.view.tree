@@ -1,6 +1,6 @@
 $mol_scroll $mol_view
-	scroll_top?val 0
-	scroll_left?val 0
+	scroll_top? 0
+	scroll_left? 0
 	field *
 		^
 		tabIndex <= tabindex -1
@@ -127,10 +127,10 @@ $mol_icon_brightness_6 $mol_icon path \M12,18V6C15.31,6 18,8.69 18,12C18,15.31 1
 $mol_lights_toggle $mol_check_icon
 	Icon <= Lights_icon $mol_icon_brightness_6
 	hint @ \Toggle lights
-	checked?val <=> lights?val false
+	checked? <=> lights? false
 
 $mol_pop $mol_view
-	showed?val false
+	showed? false
 	align_vert \
 	align_hor \
 	prefer \vert
@@ -163,17 +163,17 @@ $mol_hotkey $mol_plugin
 	mod_shift false
 
 $mol_nav $mol_plugin
-	cycle?val false
+	cycle? false
 	-
 	mod_ctrl false
 	mod_shift false
 	mod_alt false
 	-
-	keys_x?val /
-	keys_y?val /
+	keys_x? /
+	keys_y? /
 	-
-	current_x?val null
-	current_y?val null
+	current_x? null
+	current_y? null
 	-
 	event_up?event null
 	event_down?event null
@@ -188,7 +188,7 @@ $mol_string $mol_view
 	enabled true
 	minimal_height 40
 	autocomplete false
-	selection?val /number
+	selection? /number
 		0
 		0
 	auto /
@@ -196,7 +196,7 @@ $mol_string $mol_view
 	field *
 		^
 		disabled <= disabled false
-		value <= value_changed?val <=> value?val \
+		value <= value_changed? <=> value? \
 		placeholder <= hint_visible <= hint \
 		spellcheck <= spellcheck true
 		autocomplete <= autocomplete_native \
@@ -207,7 +207,7 @@ $mol_string $mol_view
 	attr *
 		^
 		maxlength <= length_max +Infinity
-		type <= type?val \text
+		type <= type? \text
 	event *
 		^
 		input?event <=> event_change?event null
@@ -248,21 +248,21 @@ $mol_dimmer $mol_paragraph
 			<= string* \
 
 $mol_search $mol_pop
-	query?val \
+	query? \
 	suggests /string
 	plugins /$mol_plugin
 		^
 		<= Hotkey $mol_hotkey
-			key * escape?val <=> clear?val null
+			key * escape? <=> clear? null
 		<= Nav $mol_nav
 			keys_y <= nav_components /$mol_view
 			current_y?component <=> nav_focused?component null
-	showed?val <=> suggests_showed?val false
+	showed? <=> suggests_showed? false
 	align_hor \right
 	Anchor $mol_view
 		sub <= anchor_content /
 			<= Query $mol_string
-				value?val <=> query?val \
+				value? <=> query? \
 				hint <= hint @ \Search...
 				submit?event <=> submit?event null
 				enabled <= enabled true
@@ -282,7 +282,7 @@ $mol_search $mol_pop
 		sub <= suggest_content* /$mol_view_content
 			<= Suggest_label* $mol_dimmer
 				haystack <= suggest_label* \
-				needle <= query?val \
+				needle <= query? \
 
 $mol_image $mol_view
 	dom_name \img
@@ -321,7 +321,7 @@ $mol_check_expand $mol_check
 	style *
 		^
 		paddingLeft <= level_style \0px
-	checked?val <=> expanded?val false
+	checked? <=> expanded? false
 	enabled <= expandable false
 
 $mol_expander $mol_list
@@ -329,7 +329,7 @@ $mol_expander $mol_list
 		<= Label $mol_view
 			sub /
 				<= Trigger $mol_check_expand
-					checked?val <=> expanded?val false
+					checked? <=> expanded? false
 					expandable <= expandable true
 					label <= label /
 						<= title
@@ -355,14 +355,14 @@ $mol_page $mol_view
 				<= Tools $mol_view
 					sub <= tools /$mol_view_content
 		<= Body $mol_scroll
-			scroll_top?val => body_scroll_top?val
+			scroll_top? => body_scroll_top?
 			sub <= body /$mol_view_content
 		<= Foot $mol_view
 			dom_name \footer
 			sub <= foot /$mol_view
 
 $mol_embed_native $mol_scroll
-	uri?val \
+	uri? \
 	dom_name \object
 	window null
 	attr *
@@ -383,7 +383,7 @@ $mol_frame $mol_embed_native
 		^
 		data null
 		type null
-		src <= uri?val \about:config
+		src <= uri? \about:config
 		srcdoc <= html null
 		allow <= allow \
 		- allowfullscreen <=
