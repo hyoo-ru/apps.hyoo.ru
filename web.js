@@ -3765,6 +3765,15 @@ var $;
         dom_name() {
             return "a";
         }
+        uri_off() {
+            return "";
+        }
+        uri_native() {
+            return null;
+        }
+        external() {
+            return false;
+        }
         attr() {
             return {
                 ...super.attr(),
