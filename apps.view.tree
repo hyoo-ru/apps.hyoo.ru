@@ -41,7 +41,7 @@ $hyoo_apps $mol_book2
 		release @ \For All
 		develop @ \For Experts
 		preview @ \For Curious
-	apps *
+	apps *$hyoo_apps_app
 		studio *
 			target \develop
 			title @ \Online Studio
