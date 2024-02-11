@@ -6,7 +6,7 @@ namespace $.$$ {
 			return this.$.$mol_state_arg.value( 'app' )
 		}
 		
-		group_name( id: string ) {
+		group_name( id: keyof ReturnType<typeof this.groups> ) {
 			return this.groups()[ id ]
 		}
 		
