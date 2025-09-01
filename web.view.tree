@@ -1,22 +1,25 @@
 $mol_scroll $mol_view
 	scroll_top? 0
 	scroll_left? 0
-	field *
+	attr *
 		^
-		tabIndex <= tabindex -1
+		tabindex <= tabindex -1
 	event *
 		^
 		scroll?event <=> event_scroll?event null
 
 $mol_book2 $mol_scroll
 	menu_title \
-	sub <= pages /$mol_view
+	sub /$mol_view
+		^ pages <= pages_deep /$mol_view
+		^ placeholders /$mol_view
+			<= Placeholder $mol_view
 	minimal_width 0
-	Placeholder $mol_view
 	Gap* $mol_view title \
 
 $mol_theme_auto $mol_plugin
-	attr * mol_theme <= theme \
+	light \$mol_theme_light
+	attr * mol_theme <= theme <= dark \$mol_theme_dark
 
 $mol_link $mol_view
 	uri \
@@ -78,6 +81,7 @@ $mol_link_source $mol_link
 		<= Icon $mol_icon_script_text
 
 $mol_speck $mol_view
+	minimal_width 12
 	attr *
 		^
 		mol_theme <= theme \$mol_theme_accent
@@ -128,10 +132,10 @@ $mol_check $mol_button_minor
 
 $mol_check_icon $mol_check
 
-$mol_icon_brightness_6 $mol_icon path \M12,18V6C15.31,6 18,8.69 18,12C18,15.31 15.31,18 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z
+$mol_icon_brightness_4 $mol_icon path \M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z
 
 $mol_lights_toggle $mol_check_icon
-	Icon <= Lights_icon $mol_icon_brightness_6
+	Icon <= Lights_icon $mol_icon_brightness_4
 	hint @ \Toggle lights
 	checked? <=> lights? false
 
@@ -223,7 +227,7 @@ $mol_string $mol_view
 			mod_ctrl <= submit_with_ctrl false
 			key * enter?event <=> submit?event null
 
-$mol_icon_cross $mol_icon path \M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z
+$mol_icon_close $mol_icon path \M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z
 
 $mol_list $mol_view
 	render_visible_only true
@@ -232,6 +236,8 @@ $mol_list $mol_view
 	Empty $mol_view
 	Gap_before $mol_view style * paddingTop <= gap_before 0
 	Gap_after $mol_view style * paddingTop <= gap_after 0
+	item_height_min* 1
+	item_width_min* 1
 	view_window /
 		0
 		0
@@ -278,12 +284,15 @@ $mol_search $mol_pop
 				bring => bring
 			<= Clear $mol_button_minor
 				hint @ \Clear
+				enabled <= enabled true
 				click?event <=> clear?event null
 				sub /
-					<= Clear_icon $mol_icon_cross
+					<= Clear_icon $mol_icon_close
 	bubble_content /$mol_view_content
-		<= Menu $mol_list
-			rows <= menu_items /$mol_view
+		<= Bubble_pane $mol_scroll
+			sub /
+				<= Menu $mol_list
+					rows <= menu_items /$mol_view
 	Suggest* $mol_button_minor
 		click?event <=> suggest_select*?event null
 		sub <= suggest_content* /$mol_view_content
@@ -293,15 +302,13 @@ $mol_search $mol_pop
 
 $mol_image $mol_view
 	dom_name \img
-	field *any
+	attr *any
 		^
 		src <= uri \
 		alt <= title
-		loading <= loading \eager
+		loading <= loading \lazy
 		decoding <= decoding \async
 		crossOrigin <= cors null
-	attr *any
-		^
 		width <= natural_width 0
 		height <= natural_height 0
 	event *any
@@ -346,7 +353,7 @@ $mol_expander $mol_list
 
 $mol_page $mol_view
 	dom_name \article
-	field *
+	attr *
 		^
 		tabIndex <= tabindex -1
 	sub /
@@ -371,13 +378,11 @@ $mol_page $mol_view
 			sub <= foot /$mol_view
 
 $mol_embed_native $mol_scroll
-	uri? \
-	dom_name \object
+	dom_name \iframe
 	window null
 	attr *
 		^
-		data <= uri
-		type <= mime \
+		src <= uri? \about:config
 	sub /
 		<= Fallback $mol_link
 			uri <= uri
@@ -387,15 +392,11 @@ $mol_embed_native $mol_scroll
 		hashchange? <=> uri_change? null
 
 $mol_frame $mol_embed_native
-	dom_name \iframe
 	attr *
-		^
-		data null
-		type null
-		src <= uri? \about:config
-		srcdoc <= html null
+		tabindex <= tabindex
 		allow <= allow \
-		- allowfullscreen <=
+		src <= uri
+		srcdoc <= html null
 	fullscreen true
 	accelerometer true
 	autoplay true
@@ -573,10 +574,14 @@ $hyoo_apps $mol_book2
 			target \develop
 			title @ \$mol UI Framework
 			uri \https://mol.hyoo.ru/
-		sync *
+		science *
 			target \develop
-			title @ \DB Watch
-			uri \https://sync.hyoo.ru/watch/
+			title @ \Science Search
+			uri \https://science.hyoo.ru/
+		crus *
+			target \develop
+			title @ \CRUS-DB
+			uri \https://crus.hyoo.ru/
 		piterjs *
 			target \develop
 			title @ \PiterJS Meetups
