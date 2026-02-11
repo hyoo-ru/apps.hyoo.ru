@@ -1,0 +1,10 @@
+{
+	"name": "hyoo_apps",
+	"short_name": "hyoo_apps",
+	"description": "",
+	"id": "hyoo_apps",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#000000"
+}
