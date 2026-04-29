@@ -1943,7 +1943,7 @@ var $;
         handler = handler2;
         error = undefined;
         result = undefined;
-        window.dispatchEvent(new Event('$mol_try'));
+        self.dispatchEvent(new Event('$mol_try'));
         const error2 = error;
         const result2 = result;
         error = undefined;
@@ -3434,6 +3434,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -3472,9 +3475,6 @@ var $;
         $$.$mol_scroll = $mol_scroll;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -3597,6 +3597,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -3672,9 +3675,6 @@ var $;
 (function ($) {
     $mol_style_attach("mol/book2/book2.view.css", "[mol_book2] {\n\tdisplay: flex;\n\tflex-flow: row nowrap;\n\talign-items: stretch;\n\tflex: 1 1 auto;\n\talign-self: stretch;\n\tmargin: 0;\n\t/* box-shadow: 0 0 0 1px var(--mol_theme_line); */\n\t/* transform: translateZ(0); */\n\ttransition: none;\n\tscroll-snap-type: x mandatory;\n\t/* padding: 0 1px;\n\tscroll-padding: 0 1px;\n\tgap: 1px; */\n}\n\n[mol_book2] > * {\n/* \tflex: none; */\n\tscroll-snap-stop: always;\n\tscroll-snap-align: end;\n\tposition: relative;\n\tmin-height: 100%;\n\tmax-height: 100%;\n\tmax-width: 100%;\n\tflex-shrink: 0;\n\tbox-shadow: inset 0 0 0 1px var(--mol_theme_field);\n}\n\n[mol_book2] > *:not(:first-of-type):before,\n[mol_book2] > *:not(:last-of-type)::after {\n\tcontent: '';\n\tposition: absolute;\n\ttop: 1.5rem;\n\twidth: 3px;\n\theight: 1rem;\n\tbackground: linear-gradient(\n\t\tto bottom,\n\t\tvar(--mol_theme_special) 0%,\n\t\tvar(--mol_theme_special) 14%,\n\t\ttransparent 15%,\n\t\ttransparent 42%,\n\t\tvar(--mol_theme_special) 43%,\n\t\tvar(--mol_theme_special) 57%,\n\t\ttransparent 58%,\n\t\ttransparent 85%,\n\t\tvar(--mol_theme_special) 86%,\n\t\tvar(--mol_theme_special) 100%\n\t);\n\topacity: .5;\n\tz-index: var(--mol_layer_speck);\n}\n[mol_book2] > *:not(:first-of-type):before {\n\tleft: -3px;\n}\n[mol_book2] > *:not(:last-of-type)::after {\n\tright: -3px;\n}\n\n:where([mol_book2]) > * {\n\tbackground-color: var(--mol_theme_card);\n\t/* box-shadow: 0 0 0 1px var(--mol_theme_back); */\n}\n\n[mol_book2] > [mol_book2] {\n\tdisplay: contents;\n}\n\n[mol_book2] > *:first-child {\n\tscroll-snap-align: start;\n}\n\n[mol_book2] > [mol_view] {\n\ttransform: none; /* prevent content clipping */\n}\n\n[mol_book2_placeholder] {\n\tflex: 1 1 0;\n\tbackground: none;\n}\n\n[mol_book2_gap] {\n\tbackground: none;\n\tflex-grow: 1;\n\tscroll-snap-align: none;\n\tmargin-right: -1px;\n\tbox-shadow: none;\n}\n\n[mol_book2_gap]::before,\n[mol_book2_gap]::after {\n\tdisplay: none;\n}\n");
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_theme_auto) = class $mol_theme_auto extends ($.$mol_plugin) {
@@ -4092,6 +4092,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -4104,9 +4107,6 @@ var $;
         $$.$mol_theme_auto = $mol_theme_auto;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -5056,9 +5056,7 @@ var $;
 var $;
 (function ($) {
     class $mol_file_web extends $mol_file_webdav {
-        static base = $mol_dom_context.document?.currentScript
-            ? new URL('.', $mol_dom_context.document.currentScript['src']).toString()
-            : '';
+        static base = new URL('.', ($mol_dom_context.document?.currentScript)['src'] ?? globalThis.location.href).toString();
         version() { return '1'; }
         info() {
             try {
@@ -5227,6 +5225,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -5305,9 +5306,6 @@ var $;
         $$.$mol_link = $mol_link;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 "use strict";
@@ -5405,6 +5403,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -5436,9 +5437,6 @@ var $;
         $$.$mol_svg = $mol_svg;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_svg_root) = class $mol_svg_root extends ($.$mol_svg) {
@@ -5676,6 +5674,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -5742,9 +5743,6 @@ var $;
 (function ($) {
     $mol_style_attach("mol/button/button.view.css", "[mol_button] {\n\tborder: none;\n\tfont: inherit;\n\tdisplay: inline-flex;\n\tflex-shrink: 0;\n\ttext-decoration: inherit;\n\tcursor: inherit;\n\tposition: relative;\n\tbox-sizing: border-box;\n\tword-break: normal;\n\tcursor: default;\n\tuser-select: none;\n\t-webkit-user-select: none;\n\tborder-radius: var(--mol_gap_round);\n\tbackground: transparent;\n\tcolor: inherit;\n}\n\n[mol_button]:where(:not(:disabled)):hover {\n\tz-index: var(--mol_layer_hover);\n}\n\n[mol_button]:focus {\n\toutline: none;\n\tz-index: var(--mol_layer_focus);\n}\n");
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_button_typed) = class $mol_button_typed extends ($.$mol_button) {
@@ -5860,6 +5858,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -5888,9 +5889,6 @@ var $;
         $$.$mol_check = $mol_check;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_check_icon) = class $mol_check_icon extends ($.$mol_check) {};
@@ -5943,6 +5941,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -5957,9 +5958,6 @@ var $;
 })($ || ($ = {}));
 
 ;
-"use strict";
-
-;
 	($.$mol_ghost) = class $mol_ghost extends ($.$mol_view) {
 		Sub(){
 			const obj = new this.$.$mol_view();
@@ -5968,6 +5966,9 @@ var $;
 	};
 	($mol_mem(($.$mol_ghost.prototype), "Sub"));
 
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -6020,9 +6021,6 @@ var $;
 })($ || ($ = {}));
 
 ;
-"use strict";
-
-;
 	($.$mol_follower) = class $mol_follower extends ($.$mol_ghost) {
 		transform(){
 			return "";
@@ -6043,6 +6041,9 @@ var $;
 	};
 	($mol_mem(($.$mol_follower.prototype), "Anchor"));
 
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -6095,9 +6096,6 @@ var $;
 (function ($) {
     $mol_style_attach("mol/follower/follower.view.css", "[mol_follower] {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\ttransition: none;\n}\n");
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_pop) = class $mol_pop extends ($.$mol_view) {
@@ -6184,6 +6182,9 @@ var $;
 		}
 	};
 
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -6308,9 +6309,6 @@ var $;
 })($ || ($ = {}));
 
 ;
-"use strict";
-
-;
 	($.$mol_hotkey) = class $mol_hotkey extends ($.$mol_plugin) {
 		keydown(next){
 			if(next !== undefined) return next;
@@ -6334,6 +6332,9 @@ var $;
 	};
 	($mol_mem(($.$mol_hotkey.prototype), "keydown"));
 
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -6365,9 +6366,6 @@ var $;
         $$.$mol_hotkey = $mol_hotkey;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_nav) = class $mol_nav extends ($.$mol_plugin) {
@@ -6435,6 +6433,9 @@ var $;
 	($mol_mem(($.$mol_nav.prototype), "event_left"));
 	($mol_mem(($.$mol_nav.prototype), "event_right"));
 
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -6535,9 +6536,6 @@ var $;
         $$.$mol_nav = $mol_nav;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_string) = class $mol_string extends ($.$mol_view) {
@@ -6662,6 +6660,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -6767,9 +6768,6 @@ var $;
 })($ || ($ = {}));
 
 ;
-"use strict";
-
-;
 	($.$mol_icon_close) = class $mol_icon_close extends ($.$mol_icon) {
 		path(){
 			return "M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z";
@@ -6848,6 +6846,9 @@ var $;
     }
     $.$mol_support_css_overflow_anchor = $mol_support_css_overflow_anchor;
 })($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -7032,9 +7033,6 @@ var $;
 })($ || ($ = {}));
 
 ;
-"use strict";
-
-;
 	($.$mol_paragraph) = class $mol_paragraph extends ($.$mol_view) {
 		line_height(){
 			return 24;
@@ -7053,6 +7051,9 @@ var $;
 		}
 	};
 
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -7108,9 +7109,6 @@ var $;
 (function ($) {
     $mol_style_attach("mol/paragraph/paragraph.view.css", ":where([mol_paragraph]) {\n\tmargin: 0;\n\tmax-width: 100%;\n}\n");
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_dimmer) = class $mol_dimmer extends ($.$mol_paragraph) {
@@ -7440,6 +7438,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -7488,9 +7489,6 @@ var $;
 (function ($) {
     $mol_style_attach("mol/dimmer/dimmer.view.css", "[mol_dimmer] {\n\tdisplay: block;\n\tmax-width: 100%;\n}\n\n[mol_dimmer_low] {\n\tdisplay: inline;\n\topacity: 0.8;\n}\n\n[mol_dimmer_high] {\n\tdisplay: inline;\n\tcolor: var(--mol_theme_focus);\n\ttext-shadow: 0 0;\n}\n");
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_search) = class $mol_search extends ($.$mol_pop) {
@@ -7648,6 +7646,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -7732,9 +7733,6 @@ var $;
 })($ || ($ = {}));
 
 ;
-"use strict";
-
-;
 	($.$mol_image) = class $mol_image extends ($.$mol_view) {
 		uri(){
 			return "";
@@ -7792,6 +7790,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -7834,9 +7835,6 @@ var $;
 })($ || ($ = {}));
 
 ;
-"use strict";
-
-;
 	($.$mol_link_iconed) = class $mol_link_iconed extends ($.$mol_link) {
 		icon(){
 			return "";
@@ -7862,6 +7860,9 @@ var $;
 	};
 	($mol_mem(($.$mol_link_iconed.prototype), "Icon"));
 
+
+;
+"use strict";
 
 ;
 "use strict";
@@ -7913,9 +7914,6 @@ var $;
 (function ($) {
     $mol_style_attach("mol/link/iconed/iconed.view.css", "[mol_link_iconed] {\n\talign-items: baseline;\n\tdisplay: inline-flex;\n\tpadding: var(--mol_gap_text);\n}\n\n[mol_link_iconed_icon] {\n\tbox-shadow: none;\n\theight: 1.5em;\n\twidth: 1em;\n\tflex: 0 0 auto;\n\tdisplay: inline-block;\n\talign-self: normal;\n\tvertical-align: top;\n\tborder-radius: 0;\n\tobject-fit: scale-down;\n\topacity: .75;\n}\n\n[mol_theme=\"$mol_theme_dark\"] [mol_link_iconed_icon] {\n\tfilter: var(--mol_theme_image);\n}\n");
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_icon_chevron) = class $mol_icon_chevron extends ($.$mol_icon) {
@@ -7974,6 +7972,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -7996,9 +7997,6 @@ var $;
 (function ($) {
     $mol_style_attach("mol/check/expand/expand.view.css", "[mol_check_expand] {\n\tmin-width: 20px;\n}\n\n:where([mol_check_expand][disabled]) [mol_check_expand_icon] {\n\tvisibility: hidden;\n}\n\n[mol_check_expand_icon] {\n\tbox-shadow: none;\n\tmargin-left: -0.375rem;\n}\n[mol_check_expand_icon] {\n\ttransform: rotateZ(0deg);\n}\n\n:where([mol_check_checked]) [mol_check_expand_icon] {\n\ttransform: rotateZ(90deg);\n}\n\n[mol_check_expand_icon] {\n\tvertical-align: text-top;\n}\n\n[mol_check_expand_label] {\n\tmargin-left: 0;\n}\n");
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_expander) = class $mol_expander extends ($.$mol_list) {
@@ -8047,6 +8045,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -8075,9 +8076,6 @@ var $;
 (function ($) {
     $mol_style_attach("mol/expander/expander.view.css", "[mol_expander] {\n\tflex-direction: column;\n}\n\n[mol_expander_label] {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tborder-radius: var(--mol_gap_round);\n}\n\n[mol_expander_trigger] {\n\tflex: auto;\n\tposition: relative;\n}\n");
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 	($.$mol_page) = class $mol_page extends ($.$mol_view) {
@@ -8360,6 +8358,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -8437,9 +8438,6 @@ var $;
 })($ || ($ = {}));
 
 ;
-"use strict";
-
-;
 	($.$mol_frame) = class $mol_frame extends ($.$mol_embed_native) {
 		allow(){
 			return "";
@@ -8484,6 +8482,9 @@ var $;
 
 ;
 "use strict";
+
+;
+"use strict";
 var $;
 (function ($) {
     var $$;
@@ -8508,9 +8509,6 @@ var $;
         $$.$mol_frame = $mol_frame;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-
-;
-"use strict";
 
 ;
 "use strict";
